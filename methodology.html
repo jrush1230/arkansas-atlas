@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — Arkansas ATLAS, Three-Year Trends</title>
+<meta name="description" content="Where every figure on this site comes from, how ADE&#x27;s suppression is carried through untouched, and what is computed rather than published.">
+<link rel="canonical" href="https://arkansas-atlas.sidetownlabs.com/methodology.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arkansas ATLAS">
+<meta property="og:title" content="Methodology — Arkansas ATLAS, Three-Year Trends">
+<meta property="og:description" content="Where every figure on this site comes from, how ADE&#x27;s suppression is carried through untouched, and what is computed rather than published.">
+<meta property="og:url" content="https://arkansas-atlas.sidetownlabs.com/methodology.html">
+<meta property="og:image" content="https://arkansas-atlas.sidetownlabs.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="assets/site.css"></head>
+<body><div class="wrap">
+<div class="masthead">
+  <div class="brand">Arkansas ATLAS <span>· three-year trends for every school and district</span></div>
+  <nav class="no-print">
+    <a href="./index.html">Search</a>
+    <a href="./statewide.html">Statewide</a>
+    <a href="./methodology.html">Methodology</a>
+
+  </nav>
+</div>
+<header class="entity-head"><h1>Methodology and sources</h1></header>
+
+<section><h2>Where the numbers come from</h2>
+<p class="sub">Every published figure on this site is the Arkansas Division of Elementary and
+Secondary Education's own published figure at that grain. District, county, co-operative and
+state figures are read from ADE's own district, County, COOP and State sheets — they are not
+totals we produced by adding up schools. That matters: about half of all school-level cells are
+suppressed for small group size, so a total built by adding up the visible schools would be a
+partial sum presented as a complete one.</p>
+<p class="sub">What <em>is</em> computed here, and labelled as computed: year-over-year changes,
+and the median of a school's peer group. Both are arithmetic over published figures.</p>
+<div class="card"><div class="tablewrap"><table class="data"><thead><tr>
+<th>ATLAS year</th><th>Shown as</th><th>ADE's own stage name</th><th>School year</th></tr></thead>
+<tbody><tr><td>2024</td><td>Final</td><td>ATLAS Summary Post-Appeals Scores Spring 2024</td><td>2023-24</td></tr><tr><td>2025</td><td>Final</td><td>ATLAS Summary Post-Corrections Scores Spring 2025 (XLSX)</td><td>2024-25</td></tr><tr><td>2026</td><td>Preliminary</td><td>ATLAS Summary Pre-Appeals Scores Spring 2026 (XLSX)</td><td>2025-26</td></tr></tbody></table></div>
+<p class="sub" style="margin:14px 0 0">ADE renamed its final release stage between years:
+Spring 2024's is "Post-Appeals" and Spring 2025's is "Post-Corrections". They mean the same
+thing — the results after appeals and corrections have run — so both are shown as
+<strong>Final</strong>. Displaying both names side by side would invite readers to think the
+two years differ in some way they do not. ADE's exact stage name is kept in the table above
+and in every page's downloadable data.</p>
+<p class="sub" style="margin:10px 0 0">ATLAS is administered in the spring of each school
+year. Year labels on this site are that spring — "2026" is the spring 2026 administration,
+which falls in the 2025-26 school year — so the word "spring" is left off the charts and
+tables rather than repeated on every label.</p></div></section>
+
+<section><h2>Suppression — what we never do</h2>
+<p class="sub">ADE hides results for small groups of students. We show that as suppression and
+never estimate the hidden value, never substitute zero, and never leave a blank that could be
+read as zero.</p>
+<div class="card"><div class="tablewrap"><table class="data"><thead>
+<tr><th>What you see</th><th>What it means</th></tr></thead><tbody>
+<tr><td>suppressed (N&lt;10)</td><td>Fewer than 10 students; ADE publishes nothing for the cell.</td></tr>
+<tr><td>suppressed (RV)</td><td>ADE's own suppression code: the number tested is real, the results are withheld.</td></tr>
+<tr><td>not published this year</td><td>Spring 2024 and 2025 do not publish per-level student counts at all. Absent is not the same as hidden.</td></tr>
+<tr><td>counts suppressed</td><td>New in Spring 2026: ADE publishes the percentages and the number tested but hides the per-level counts.</td></tr>
+<tr><td>—</td><td>The subject is not tested at that grade anywhere in Arkansas.</td></tr>
+</tbody></table></div>
+<p class="sub" style="margin:14px 0 0">In Spring 2026 the hidden per-level counts could be
+reconstructed arithmetically from the published percentages. We deliberately do not do this.
+A cell ADE chose to suppress stays suppressed here.</p></div></section>
+
+<section><h2>Percentages come from counts where ADE publishes counts</h2>
+<p class="sub">Where Spring 2026 publishes per-level student counts, every percentage on this
+site is derived from those counts, so the level bars always sum to 100 and always agree with the
+headline figure. ADE's own published percentages disagree with its own published counts in 396
+of 6,620 cells — always by dividing by a slightly larger denominator than the published number
+tested, by up to 1.1 percentage points. Where counts are not published, ADE's percentages are
+used exactly as published. Each figure records which of the two it is.</p></section>
+
+<section><h2>The Spring 2026 release is Pre-Appeals</h2>
+<p class="sub">Spring 2026 figures come from ADE's Pre-Appeals release and can still change.
+At that stage ADE's statewide total runs above the sum of its own districts by between +0.006%
+and +0.184% depending on subject (ELA: 415 students out of 283,156), because some test records
+are not yet attributed to a school. Spring 2024 and Spring 2025, both final releases, reconcile
+exactly with zero gap. Where this site shows a state figure it shows <strong>ADE's own State
+sheet figure</strong>, never a sum of districts, so one sourcing rule holds everywhere.</p></section>
+
+<section><h2>Small groups</h2>
+<p class="sub">A percentage over fewer than 30 students moves several points on one
+student's result. Those figures are shown with the number tested attached and a caution badge,
+are left out of statewide distributions and peer medians, and are not placed in a quartile band.
+Charts state how many entities were excluded rather than dropping them silently.</p></section>
+
+<section><h2>Comparing years</h2>
+<p class="sub">The headline trend is cross-sectional: it is the same grade each year, made up of
+different students. A school's grade-4 result rising does not by itself mean any child improved.
+The cohort view follows one group forward instead — grade 4 to grade 5 to grade 6 — which is the
+closer thing to progress, though students still move in and out of a school between years.</p></section>
+
+<section><h2>Similar schools and similar districts</h2>
+<p class="sub">Twelve nearest schools inside the same grade-span band, by rank-normalized
+distance over four equally weighted dimensions: economically-disadvantaged percentage, log
+enrollment, English-learner percentage and special-education percentage. Two schools with the
+same poverty rate and the same size can serve very different populations — one with a third of
+its students learning English, one with almost none — and a peer set that ignores that is
+comparing the wrong things. District pages use the same formula, with the grade-span band
+replaced by whether the district runs kindergarten through grade 12.</p>
+<p class="sub">The band is a filter, not a fifth distance term: as a soft term it would pair a
+K-5 with a 9-12 whenever the other dimensions happened to line up. An entity missing any one of
+the four dimensions gets no peer panel and a note saying so, rather than a peer set built on
+whichever dimensions happen to be present.</p>
+<p class="sub">Peer medians are computed from ADE's published figures and labelled as computed.
+Peers below 30 tested students are excluded and counted.</p></section>
+
+<section><h2>The two measures of economic need</h2>
+<p class="sub">Arkansas data carries two, and they are not interchangeable. The site
+<em>displays</em> the audited Child Nutrition free-and-reduced figure and <em>matches</em> peers
+on MSI's ESSA economically-disadvantaged percentage, which covers more schools (1,003 against
+885), so one consistent definition runs through the whole comparison set. Both are labelled
+wherever they appear.</p>
+<p class="sub">At <strong>school</strong> grain the two turn out to agree exactly on 924 of 929
+schools — MSI's school-level economically-disadvantaged figure appears simply to be the Child
+Nutrition free-and-reduced figure. At <strong>district</strong> grain they genuinely differ
+(Green Forest: 85.4% against 74.9%). So the split between what is shown and what is matched on
+rests on coverage, not on the two being different definitions at school level.</p>
+<p class="sub">Districts operating community eligibility (CEP) report all students as eligible,
+so their free-and-reduced figure is flagged and is not comparable with a non-CEP district's.</p></section>
+
+<section><h2>Special education and English learners</h2>
+<p class="sub">Both come from My School Info, at school and district grain, for the school year
+matching the latest ATLAS administration. Arkansas also publishes a special-education count
+through its special-education office, taken as a December 1 child count; that figure and My
+School Info's percentage do not agree, by an average of about one percentage point and
+occasionally much more, because the two use different timing and different denominators. The
+site uses My School Info's figure throughout so that one definition runs across every school and
+district, and says so here rather than presenting a blend of the two.</p></section>
+
+<section><h2>What this site is not</h2>
+<p class="sub">It is not a ranking. There is no composite score and no letter grade, and no
+precise statewide rank is reported — only a quartile band. ATLAS results are never spliced
+together with ACT Aspire or ACT results: they are different tests on different scales, and a
+line drawn across them would be meaningless.</p>
+<p class="sub">This is an independent site. It is not affiliated with, endorsed by, or operated by the Arkansas Division of Elementary and Secondary Education. It is built entirely from data ADE publishes.</p></section>
+
+<section id="license"><h2>License and permissions</h2>
+<p class="sub">© 2026 Joel Rush / Sidetown Labs. All rights reserved.</p>
+<p class="sub">Some uses need no permission at all. <strong>Screenshots, excerpts and printed
+copies</strong> of any page, chart or table are welcome — with attribution to
+<code>arkansas-atlas.sidetownlabs.com</code> — for schools, school districts, education service
+cooperatives, school boards, press, and academic or policy research. Linking to any page is
+always fine. This site exists to be used in a board packet or a news story, and that use is
+pre-authorized so nobody has to ask first.</p>
+<p class="sub">Anything else — republishing substantial portions, redistributing the site's
+files, offering a derived or modified version, or any commercial use — needs written permission:
+<a href="mailto:joelrush@gmail.com">joelrush@gmail.com</a>. Permission is usually a short
+email away; the point of asking is that a copy of this site elsewhere goes stale, and a stale
+copy of assessment figures is worse than none.</p>
+<p class="sub"><strong>The underlying figures are public records</strong> published by the
+Arkansas Division of Elementary and Secondary Education, and no claim is made over the facts
+themselves. What is covered here is this site's text, code, design, charts and compilation —
+the arrangement, not the numbers. ADE's own published workbooks remain available from ADE, and
+every figure on this site is downloadable from the page that shows it.</p>
+<p class="sub">Citation: Rush, Joel. <em>Arkansas ATLAS — three-year trends.</em> Sidetown Labs,
+2026. https://arkansas-atlas.sidetownlabs.com/.</p></section>
+
+<footer><p>Built from ADE's published ATLAS Summary workbooks (by-grade, No-Grade, and
+COOP/County), Spring 2024–2026, plus ADE's Statewide Information System,
+My School Info and Child Nutrition reports for context measures. No federal data sources are used.</p>
+<p>This is an independent site. It is not affiliated with, endorsed by, or operated by the Arkansas Division of Elementary and Secondary Education. It is built entirely from data ADE publishes.</p>
+<p class="copyright">© 2026 Joel Rush / Sidetown Labs. All rights reserved. <a href="./methodology.html#license">Permissions and pre-authorized uses</a>.</p></footer>
+</div>
+<script>
+  window.goatcounter = { path: function(p) { return 'atlas' + p } };
+</script>
+<script data-goatcounter="https://sidetownlabs.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body></html>

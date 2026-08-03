@@ -1,0 +1,314 @@
+
+/* Arkansas ATLAS trends site.
+   Palette values come from the validated data-viz reference instance; the
+   categorical order used here (blue, orange, aqua, violet, magenta) was run
+   through the six-checks validator in both modes and passes every hard gate.
+   Aqua and magenta sit below 3:1 on the light surface, so the relief rule
+   applies: every series carries a visible direct label at its endpoint AND
+   the same figures appear in the benchmark table below each chart. */
+
+:root {
+  color-scheme: light;
+  --surface-1: #fcfcfb;
+  --plane: #f9f9f7;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  /* #6f6d67, not the dark block's #898781. As one literal in both blocks it
+     passes AA in dark and fails AA for normal text on this light surface
+     (~3.5:1) -- and what it styles is the honesty apparatus: chart axis
+     labels, as-of notes, source lines. This is the estate's already-validated
+     light-mode value (S40/F12, 2026-07-31); Joel approved applying it here
+     2026-08-03. It SUPERSEDES `design-reference/*.html` on this one token --
+     the reference files are otherwise still the authority on page structure
+     and were deliberately left unedited. */
+  --text-muted: #6f6d67;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11, 11, 11, 0.10);
+
+  --series-entity: #2a78d6;
+  --series-district: #eb6834;
+  --series-county: #1baf7a;
+  --series-coop: #4a3aa7;
+  --series-state: #e87ba4;
+
+  --level-1: #c0392b;
+  --level-2: #bd850c;
+  --level-3: #2e8b57;
+  --level-4: #2a78d6;
+
+  --good: #0ca30c;
+  --warning: #fab219;
+  --critical: #d03b3b;
+  --delta-up: #006300;
+
+  --radius: 10px;
+  --pad: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --plane: #0d0d0d;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #898781;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255, 255, 255, 0.10);
+    --series-entity: #3987e5;
+    --series-district: #d95926;
+    --series-county: #199e70;
+    --series-coop: #9085e9;
+    --series-state: #d55181;
+    --level-1: #e05c4d;
+    --level-2: #c98f14;
+    --level-3: #46b371;
+    --level-4: #5598e7;
+    --delta-up: #0ca30c;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-1: #1a1a19;
+  --plane: #0d0d0d;
+  --text-primary: #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted: #898781;
+  --grid: #2c2c2a;
+  --axis: #383835;
+  --border: rgba(255, 255, 255, 0.10);
+  --series-entity: #3987e5;
+  --series-district: #d95926;
+  --series-county: #199e70;
+  --series-coop: #9085e9;
+  --series-state: #d55181;
+  --level-1: #e05c4d;
+  --level-2: #c98f14;
+  --level-3: #46b371;
+  --level-4: #5598e7;
+  --delta-up: #0ca30c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--plane);
+  color: var(--text-primary);
+  font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 24px 20px 72px; }
+
+a { color: var(--series-entity); }
+
+/* ---- header ---- */
+
+.masthead {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 16px; flex-wrap: wrap;
+  border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 20px;
+}
+.masthead .brand { font-weight: 650; letter-spacing: -0.01em; }
+.masthead .brand span { color: var(--text-muted); font-weight: 400; }
+.masthead nav { display: flex; gap: 16px; font-size: 14px; }
+
+.entity-head { margin-bottom: 8px; }
+.entity-head .kind {
+  display: inline-block; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted); font-weight: 600;
+}
+.entity-head h1 {
+  font-size: clamp(24px, 3.4vw, 34px); line-height: 1.15; margin: 4px 0 6px;
+  letter-spacing: -0.02em;
+}
+.entity-head .lineage { color: var(--text-secondary); font-size: 15px; }
+.entity-head .lineage a { color: inherit; text-decoration-color: var(--border); }
+
+.facts {
+  display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 4px;
+}
+.fact {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 7px 11px; min-width: 0; cursor: help; text-align: center;
+}
+.fact .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+.fact .value { font-size: 20px; font-weight: 600; margin-top: 2px; }
+.fact .value.na { font-size: 14px; font-weight: 500; color: var(--text-muted); font-style: italic; }
+.fact .asof { display: none; }
+@media print { .fact .asof { display: block; font-size: 10px; color: var(--text-muted); margin-top: 2px; } }
+
+/* ---- notices ---- */
+
+.notice {
+  display: flex; gap: 10px; align-items: flex-start;
+  border: 1px solid var(--border); border-left: 3px solid var(--warning);
+  background: var(--surface-1); border-radius: var(--radius);
+  padding: 12px 14px; margin: 18px 0; font-size: 14px; color: var(--text-secondary);
+}
+.notice .icon { flex: none; font-weight: 700; color: var(--warning); }
+.notice strong { color: var(--text-primary); }
+
+/* ---- cards & sections ---- */
+
+section { margin-top: 32px; }
+section > h2 {
+  font-size: 19px; margin: 0 0 4px; letter-spacing: -0.01em;
+}
+section > .sub { color: var(--text-secondary); font-size: 14px; margin: 0 0 14px; max-width: 68ch; }
+
+.card {
+  background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: var(--pad);
+}
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; align-items: center; }
+.toolbar .spacer { flex: 1 1 auto; }
+
+button.chip {
+  font: inherit; font-size: 13px; padding: 5px 11px; border-radius: 999px;
+  border: 1px solid var(--border); background: transparent; color: var(--text-secondary);
+  cursor: pointer;
+}
+button.chip[aria-pressed="true"] {
+  background: var(--text-primary); color: var(--surface-1); border-color: var(--text-primary);
+}
+button.chip:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ---- charts ---- */
+
+.chart { width: 100%; overflow-x: auto; }
+.chart svg { display: block; width: 100%; height: auto; }
+.chart text { font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+.gridline { stroke: var(--grid); stroke-width: 1; }
+.axisline { stroke: var(--axis); stroke-width: 1; }
+.ticklabel { fill: var(--text-muted); }
+.axistitle { fill: var(--text-secondary); font-size: 11px; }
+.serieslabel { font-size: 12px; font-weight: 600; }
+.pointlabel { fill: var(--text-secondary); font-size: 11px; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 12px; font-size: 13px; }
+.legend button {
+  display: inline-flex; align-items: center; gap: 7px; background: none; border: 0;
+  padding: 2px 0; font: inherit; color: var(--text-secondary); cursor: pointer;
+}
+.legend button[aria-pressed="false"] { opacity: 0.38; }
+.legend .swatch { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+.legend .swatch.line { height: 3px; border-radius: 2px; }
+
+.tooltip {
+  position: absolute; pointer-events: none; z-index: 20;
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px 10px; font-size: 13px; box-shadow: 0 4px 18px rgba(0,0,0,0.14);
+  min-width: 150px;
+}
+.tooltip .tt-title { font-weight: 650; margin-bottom: 4px; }
+.tooltip .tt-row { display: flex; justify-content: space-between; gap: 14px; }
+.tooltip .tt-row .k { color: var(--text-secondary); display: flex; align-items: center; gap: 6px; }
+.tooltip .tt-row .v { font-variant-numeric: tabular-nums; }
+.tooltip .tt-note { color: var(--text-muted); font-size: 12px; margin-top: 4px; }
+
+/* ---- tables ---- */
+
+table.data { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.data th, table.data td {
+  text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--grid);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+table.data th:first-child, table.data td:first-child { text-align: left; font-variant-numeric: normal; }
+table.data thead th { color: var(--text-muted); font-weight: 600; font-size: 12px;
+  text-transform: uppercase; letter-spacing: 0.04em; }
+table.data tbody tr.self td { font-weight: 650; }
+table.data td.na { color: var(--text-muted); font-style: italic; font-variant-numeric: normal; }
+.tablewrap { overflow-x: auto; }
+
+.swatch-inline { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 7px; }
+
+/* ---- badges ---- */
+
+.badge {
+  display: inline-block; font-size: 11px; font-weight: 650; letter-spacing: 0.03em;
+  padding: 1px 7px; border-radius: 999px; border: 1px solid var(--border);
+  color: var(--text-secondary); vertical-align: middle;
+}
+.badge.small-n { border-color: var(--warning); color: var(--text-primary); }
+.badge.band { border-color: var(--border); }
+.delta.up { color: var(--delta-up); font-weight: 650; }
+.delta.down { color: var(--critical); font-weight: 650; }
+.delta.flat { color: var(--text-secondary); font-weight: 650; }
+
+/* ---- peers ---- */
+
+.peerlist { display: grid; gap: 0; }
+.peer {
+  display: grid; grid-template-columns: 1fr auto auto auto auto; gap: 12px; align-items: baseline;
+  padding: 8px 0; border-bottom: 1px solid var(--grid); font-size: 14px;
+}
+.peer .pname { font-weight: 550; }
+.peer .pdist { color: var(--text-muted); font-size: 12px; display: block; font-weight: 400; }
+.peer .num { font-variant-numeric: tabular-nums; color: var(--text-secondary); }
+
+/* ---- footer ---- */
+
+footer {
+  margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--border);
+  font-size: 13px; color: var(--text-muted);
+}
+footer .downloads { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 10px; }
+/* The © line prints: a page torn out for a board packet should still say
+   whose it is and where the permissions are. Deliberately NOT `.no-print`. */
+footer .copyright { margin-top: 10px; }
+
+/* ---- print: the board one-pager ---- */
+
+@media print {
+  :root { --surface-1: #fff; --plane: #fff; --text-primary: #000;
+          --text-secondary: #333; --text-muted: #555; --border: #bbb; --grid: #ddd; }
+  body { font-size: 10.5pt; }
+  .wrap { max-width: none; padding: 0; }
+  .masthead nav, .toolbar, .legend button { display: none !important; }
+  .legend { display: flex !important; }
+  .no-print, .peerlist, #cohort-section { display: none; }
+  section { margin-top: 16px; page-break-inside: avoid; }
+  .card { border: 1px solid #bbb; padding: 12px; }
+  a { text-decoration: none; color: #000; }
+  .print-only { display: block !important; }
+}
+.print-only { display: none; }
+
+
+/* The reference styles `.downloads` only inside a footer; the search page's
+   download card uses the same component outside one, where it would otherwise
+   run its three links together with no gap. */
+.downloads { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ---- print proof: two fixes found by rendering the real one-pager ----
+
+   1. `.no-print` lost to `footer .downloads` on specificity, so the board
+      one-pager printed "Download this page's data (JSON)" across the bottom.
+   2. `table.data` is `white-space: nowrap`, and on screen `.tablewrap` scrolls.
+      Paper cannot scroll: the benchmark table's widest row (a co-op's full
+      name) pushed the change column off the right edge of the sheet, so the
+      printed table showed "▲" with the percentage-point figure clipped away --
+      the one column a board reader looks at first. Wrapping the label column
+      on paper puts it back. */
+@media print {
+  footer .downloads, .no-print { display: none !important; }
+  table.data { font-size: 9.5pt; }
+  table.data th, table.data td { white-space: normal; padding: 5px 6px; }
+  table.data td:first-child, table.data th:first-child { max-width: 220px; }
+}
+
+/* ---- sticky selection bar + heading echo ---- */
+.selbar {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--bg, var(--surface-0, var(--surface-1)));
+  padding: 10px 0 8px; margin: 0 0 -6px;
+  border-bottom: 1px solid var(--border);
+}
+.selbar .toolbar { margin-bottom: 6px; }
+.selecho { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 10px; white-space: nowrap; }
+@media print { .selbar { display: none; } .selecho { color: #555; } }

@@ -1,0 +1,77 @@
+/* Statewide layer. Loaded after site.css, which supplies the surfaces, ink,
+   chrome and chart primitives; this file adds only what the statewide views
+   need — the diverging change scale and the two layouts.
+
+   The diverging scale is the documented blue-red pair with a neutral gray
+   midpoint, three steps per arm, lightness-monotonic outward from the middle
+   in both modes (checked, not eyeballed). Green-vs-red was rejected: it is the
+   classic colour-vision failure, and the site already spends green and red on
+   the up/down text deltas, which carry an arrow and a word as well. Every mark
+   here is labelled with its own number, so the fill is never the only channel. */
+
+:root {
+  --div-neg-3: #8e2018;
+  --div-neg-2: #d03b3b;
+  --div-neg-1: #f0b1a9;
+  --div-zero:  #f0efec;
+  --div-pos-1: #9ec5f4;
+  --div-pos-2: #3987e5;
+  --div-pos-3: #184f95;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    --div-neg-3: #f0a99e;
+    --div-neg-2: #e05c4d;
+    --div-neg-1: #a33228;
+    --div-zero:  #383835;
+    --div-pos-1: #256abf;
+    --div-pos-2: #3987e5;
+    --div-pos-3: #86b6ef;
+  }
+}
+
+:root[data-theme="dark"] {
+  --div-neg-3: #f0a99e;
+  --div-neg-2: #e05c4d;
+  --div-neg-1: #a33228;
+  --div-zero:  #383835;
+  --div-pos-1: #256abf;
+  --div-pos-2: #3987e5;
+  --div-pos-3: #86b6ef;
+}
+
+/* Sorted diverging rows: name, bar from a centre baseline, value at the end. */
+.rows { display: grid; gap: 2px; }
+.rowitem {
+  display: grid; grid-template-columns: 250px 1fr 62px; gap: 10px;
+  align-items: center; font-size: 13px;
+}
+.rowitem .rname { color: var(--text-secondary); white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; }
+.rowitem .rname a { color: inherit; text-decoration: none; }
+.rowitem .rbar { position: relative; height: 15px; }
+.rowitem .rbar i {
+  position: absolute; top: 1px; height: 13px; border-radius: 3px; display: block;
+}
+.rowitem .rbar u {
+  position: absolute; top: -1px; bottom: -1px; width: 1px;
+  background: var(--axis); text-decoration: none;
+}
+.rowitem .rval { text-align: right; font-variant-numeric: tabular-nums;
+  color: var(--text-primary); font-weight: 600; }
+.rowitem .rval.na { color: var(--text-muted); font-weight: 400; font-style: italic;
+  font-size: 11.5px; }
+
+.scalekey { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  font-size: 12.5px; color: var(--text-muted); margin-top: 14px; }
+.scalekey .sw { width: 26px; height: 12px; border-radius: 3px; display: inline-block; }
+
+.statgrid { display: flex; flex-wrap: wrap; gap: 22px; margin: 0 0 14px; }
+.statgrid .stat .k { font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--text-muted); }
+.statgrid .stat .v { font-size: 22px; font-weight: 650; }
+
+@media print {
+  .rowitem { grid-template-columns: 160px 1fr 56px; font-size: 10pt; }
+}
