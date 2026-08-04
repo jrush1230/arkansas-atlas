@@ -81,7 +81,125 @@
   const hideTip = () => { tip.style.display = "none"; };
   window.addEventListener("scroll", hideTip, { passive: true });
 
-  /* ---------- sorted diverging rows (the map replacement) ---------- */
+  /* ---------- the scale key, shared by the maps and the lists ---------- */
+
+  function scaleKey() {
+    return h("div", { class: "scalekey" }, [
+      "Change in percentage points:",
+      h("span", { class: "sw", style: `background:${cssVar("--div-neg-3")}` }), "−7 or worse",
+      h("span", { class: "sw", style: `background:${cssVar("--div-neg-2")}` }), "−3",
+      h("span", { class: "sw", style: `background:${cssVar("--div-neg-1")}` }), "−1",
+      h("span", { class: "sw", style: `background:${cssVar("--div-zero")};border:1px solid var(--border)` }), "under ±1",
+      h("span", { class: "sw", style: `background:${cssVar("--div-pos-1")}` }), "+1",
+      h("span", { class: "sw", style: `background:${cssVar("--div-pos-2")}` }), "+3",
+      h("span", { class: "sw", style: `background:${cssVar("--div-pos-3")}` }), "+7 or better",
+      h("span", { class: "sw hatch" }), "no change figure",
+    ]);
+  }
+
+  /* ---------- choropleth ----------
+
+     Shapes are Census boundary geometry (Step B.1's granted exception); every
+     value colouring one is ADE's own published figure. A shape whose entity has
+     no computable change is hatched, never filled with a colour that would read
+     as a small change, and the reason travels with it in the tooltip and in the
+     list below.
+
+     Fill is never the only channel: the sorted list under each map carries the
+     same entities with their numbers in text, which is also the print and
+     no-hover path. */
+
+  function renderMap(hostId, grain, entries) {
+    const host = document.getElementById(hostId);
+    if (!host) return;
+    host.innerHTML = "";
+    const geo = DATA.geography;
+    const paths = geo && geo[grain];
+    if (!paths || !Object.keys(paths).length) return;
+
+    const byId = {};
+    entries.forEach((e) => { byId[e.id] = e; });
+    const view = geo.view;
+    const s = svg("svg", {
+      viewBox: `0 0 ${view.width} ${view.height}`, class: "map",
+      role: "img",
+      "aria-label": `Map of Arkansas ${grain === "coop" ? "education service cooperatives"
+        : "counties"}, shaded by change in ${state.subject} between ${FIRST} and ${LAST}. `
+        + "The same figures are listed in text below the map.",
+    });
+
+    // "No figure" has to be unmistakable against `--div-zero`, which is also
+    // pale: a shape that reads as "roughly no change" when the truth is "we
+    // cannot say" is exactly the error this site exists not to make. Hence a
+    // hatch rather than another flat tone, at a spacing coarse enough to
+    // survive the print scale.
+    const patternId = "nofig-" + hostId;
+    const defs = svg("defs");
+    const pat = svg("pattern", {
+      id: patternId, width: 5, height: 5, patternUnits: "userSpaceOnUse",
+      patternTransform: "rotate(45)",
+    });
+    pat.appendChild(svg("rect", { width: 5, height: 5, fill: surface() }));
+    pat.appendChild(svg("line", { x1: 0, y1: 0, x2: 0, y2: 5,
+      stroke: cssVar("--text-secondary"), "stroke-width": 1.8 }));
+    defs.appendChild(pat);
+    s.appendChild(defs);
+
+    Object.keys(paths).sort().forEach((id) => {
+      const e = byId[id];
+      const known = e && e.delta !== null;
+      const p = svg("path", {
+        d: paths[id], class: "shape",
+        fill: known ? divColor(e.delta) : `url(#${patternId})`,
+        // Even-odd, not the default: a co-op area that encloses another one
+        // carries that neighbour as an interior ring, and shapely does not
+        // promise the two rings wind in opposite directions -- under the
+        // nonzero rule an enclosed co-op would be painted over by the one
+        // around it.
+        "fill-rule": "evenodd",
+        stroke: surface(), "stroke-width": 0.7,
+      });
+      const label = (e && e.name) || id;
+      p.appendChild(svg("title", {}, label + " — " + (known
+        ? (e.delta > 0 ? "+" : "") + e.delta.toFixed(1) + "pp"
+        : (e ? REASONS[e.reason] || "no change figure" : "no figure published"))));
+      if (e) {
+        p.addEventListener("mousemove", (ev) => {
+          showTip(ev.pageX, ev.pageY, e.name, [
+            { k: String(FIRST), v: e.first === null ? "not published" : e.first.toFixed(1) + "%" },
+            { k: String(LAST), v: e.last === null ? "not published" : e.last.toFixed(1) + "%" },
+            { k: "Change", v: known ? (e.delta > 0 ? "+" : "") + e.delta.toFixed(1) + "pp"
+                                    : REASONS[e.reason] || "not available" },
+            { k: "Tested " + LAST, v: e.n_last === null ? "—" : e.n_last.toLocaleString() },
+          ], "Both figures are ADE's own published figures; the change is computed from them.");
+        });
+        p.addEventListener("mouseleave", hideTip);
+      }
+      s.appendChild(p);
+    });
+    host.appendChild(s);
+    host.appendChild(scaleKey());
+
+    const cov = geo.coverage || {};
+    const notes = [geo.source_note];
+    if (grain === "coop" && cov.districts_without_boundary) {
+      notes.push(
+        `Co-operative areas are the combined boundaries of their member districts, from ADE's `
+        + `own Master List. ${cov.districts_matched} of ${cov.districts_total} districts have a `
+        + `published boundary; the other ${cov.districts_without_boundary.length} are `
+        + "open-enrollment charters and state-operated schools, which have no geographic service "
+        + "area. Their students are counted in the co-operative's published figure but add no "
+        + "area to the map.");
+    }
+    const missing = entries.filter((e) => e.delta === null).length;
+    if (missing) {
+      notes.push(`${missing} shaded with hatching: no change figure for ${state.subject}, `
+        + "for the reason given in the list below.");
+    }
+    host.appendChild(h("p", { class: "mapnote" }, [notes.join(" ")]));
+  }
+
+  /* ---------- sorted diverging rows (the numbers under each map) ---------- */
 
   function renderRows(hostId, grain, linkPrefix) {
     const host = document.getElementById(hostId);
@@ -134,17 +252,11 @@
     });
     host.appendChild(list);
 
-    const key = h("div", { class: "scalekey" }, [
-      "Change in percentage points:",
-      h("span", { class: "sw", style: `background:${cssVar("--div-neg-3")}` }), "−7 or worse",
-      h("span", { class: "sw", style: `background:${cssVar("--div-neg-2")}` }), "−3",
-      h("span", { class: "sw", style: `background:${cssVar("--div-neg-1")}` }), "−1",
-      h("span", { class: "sw", style: `background:${cssVar("--div-zero")};border:1px solid var(--border)` }), "under ±1",
-      h("span", { class: "sw", style: `background:${cssVar("--div-pos-1")}` }), "+1",
-      h("span", { class: "sw", style: `background:${cssVar("--div-pos-2")}` }), "+3",
-      h("span", { class: "sw", style: `background:${cssVar("--div-pos-3")}` }), "+7 or better",
-    ]);
-    host.appendChild(key);
+    // The key sits with the map above when there is one; repeating it here
+    // would just be two legends for one scale.
+    if (!document.getElementById(hostId.replace("-rows", "-map"))) {
+      host.appendChild(scaleKey());
+    }
     const unavailable = entries.length - withDelta.length;
     if (unavailable) {
       host.appendChild(h("p", { style: "color:var(--text-muted);font-size:12.5px;margin:10px 0 0" }, [
@@ -308,6 +420,8 @@
 
   function renderAll() {
     renderControls();
+    renderMap("county-map", "county", (DATA.county || {})[state.subject] || []);
+    renderMap("coop-map", "coop", (DATA.coop || {})[state.subject] || []);
     renderRows("county-rows", "county", null);
     renderRows("coop-rows", "coop", null);
     renderChangeDist();

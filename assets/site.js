@@ -630,6 +630,150 @@
     host.appendChild(s);
   }
 
+  /* ---------- change against level (district pages) ----------
+
+     The same points the statewide page plots, packed small enough to embed
+     here: identical eligibility (both endpoint years published, both over the
+     N floor), identical exclusions, and the reference line is ADE's own State
+     figure rather than a mean of the dots.
+
+     Always all grades. The page's grade chips do not filter it, because the
+     all-grades district figure is the only cut ADE publishes for every
+     district; the heading and the note both say so instead of quietly
+     ignoring the selection. */
+
+  function renderScatter() {
+    const host = document.getElementById("scatter-chart");
+    if (!host) return;
+    const note = document.getElementById("scatter-note");
+    const legend = document.getElementById("scatter-legend");
+    host.innerHTML = ""; note.innerHTML = ""; legend.innerHTML = "";
+
+    const SC = DATA.scatter;
+    const block = SC && SC.subjects[state.subject];
+    if (!block || !block.points.length) {
+      note.textContent = "No district has both a published " + SC.years.last
+        + " figure and a published change in " + state.subject + ", so there is nothing to plot.";
+      return;
+    }
+
+    const selfId = DATA.entity.id;
+    const myCountyIx = SC.counties.findIndex((c) =>
+      DATA.entity.county && c.toLowerCase() === String(DATA.entity.county).toLowerCase());
+    const myCoopIx = SC.coops.indexOf(DATA.entity.coop ? DATA.entity.coop.id : null);
+
+    // A district in this county is also in this co-operative; the tighter
+    // grouping wins the colour, and the legend says so.
+    const groupOf = (p) => (p[0] === selfId ? "self"
+      : (myCountyIx >= 0 && p[4] === myCountyIx) ? "county"
+      : (myCoopIx >= 0 && p[5] === myCoopIx) ? "coop" : "other");
+
+    const W = 780, H = 420, M = { t: 20, r: 20, b: 48, l: 54 };
+    const iw = W - M.l - M.r, ih = H - M.t - M.b;
+    const s = svg("svg", { viewBox: `0 0 ${W} ${H}`, role: "img",
+      "aria-label": `Every Arkansas district's ${state.subject} change since ${SC.years.first} `
+        + `against its ${SC.years.last} level, with ${DISPLAY_NAME} marked.` });
+
+    const levels = block.points.map((p) => p[1]), deltas = block.points.map((p) => p[2]);
+    const xlo = Math.max(0, Math.floor((Math.min.apply(null, levels) - 3) / 10) * 10);
+    const xhi = Math.min(100, Math.ceil((Math.max.apply(null, levels) + 3) / 10) * 10);
+    const dmax = Math.max(5, Math.ceil(Math.max.apply(null, deltas.map(Math.abs)) / 5) * 5);
+    const x = (v) => M.l + (iw * (v - xlo)) / (xhi - xlo);
+    const y = (v) => M.t + ih / 2 - (ih / 2) * (v / dmax);
+
+    for (let v = xlo; v <= xhi + 0.001; v += 10) {
+      s.appendChild(svg("line", { class: "gridline", x1: x(v), x2: x(v), y1: M.t, y2: M.t + ih }));
+      s.appendChild(svg("text", { class: "ticklabel", x: x(v), y: M.t + ih + 20, "text-anchor": "middle" }, v + "%"));
+    }
+    for (let v = -dmax; v <= dmax + 0.001; v += dmax / 2) {
+      s.appendChild(svg("line", { class: "gridline", x1: M.l, x2: M.l + iw, y1: y(v), y2: y(v) }));
+      s.appendChild(svg("text", { class: "ticklabel", x: M.l - 8, y: y(v) + 4, "text-anchor": "end" },
+        (v > 0 ? "+" : "") + v));
+    }
+    s.appendChild(svg("line", { class: "axisline", x1: M.l, x2: M.l + iw, y1: y(0), y2: y(0) }));
+    s.appendChild(svg("text", { class: "axistitle", x: M.l + iw / 2, y: H - 10, "text-anchor": "middle" },
+      `Percent Ready or Exceeding, ${SC.years.last}`));
+    s.appendChild(svg("text", { class: "axistitle", x: 14, y: M.t + ih / 2,
+      "text-anchor": "middle", transform: `rotate(-90 14 ${M.t + ih / 2})` },
+      `Change since ${SC.years.first} (pp)`));
+
+    const stateLevel = SC.state_level[state.subject];
+    if (stateLevel !== undefined && stateLevel !== null) {
+      s.appendChild(svg("line", { x1: x(stateLevel), x2: x(stateLevel), y1: M.t, y2: M.t + ih,
+        stroke: cssVar("--series-state"), "stroke-width": 1, "stroke-dasharray": "4 3" }));
+      s.appendChild(svg("text", { class: "ticklabel", x: x(stateLevel) + 5, y: M.t + 12 },
+        `Arkansas ${stateLevel.toFixed(1)}%`));
+    }
+
+    const FILL = { other: cssVar("--text-muted"), county: cssVar("--series-county"),
+                   coop: cssVar("--series-coop"), self: cssVar("--series-entity") };
+    const ORDER = { other: 0, coop: 1, county: 2, self: 3 };
+    const counts = { other: 0, county: 0, coop: 0, self: 0 };
+    const drawn = block.points.map((p) => ({ p: p, g: groupOf(p) }));
+    drawn.forEach((d) => { counts[d.g] += 1; });
+    drawn.sort((a, b) => ORDER[a.g] - ORDER[b.g]);
+
+    drawn.forEach((d) => {
+      const p = d.p, isSelf = d.g === "self";
+      const c = svg("circle", {
+        cx: x(p[1]), cy: y(p[2]), r: isSelf ? 7 : d.g === "other" ? 3.6 : 5,
+        fill: FILL[d.g], stroke: surface(), "stroke-width": isSelf ? 2 : 1.2,
+        opacity: d.g === "other" ? 0.5 : 0.95,
+      });
+      c.appendChild(svg("title", {}, `${SC.names[p[0]]} — ${p[1].toFixed(1)}% in ${SC.years.last}, `
+        + `${p[2] > 0 ? "+" : ""}${p[2].toFixed(1)}pp since ${SC.years.first}`));
+      c.addEventListener("mousemove", (ev) => showTip(ev.pageX, ev.pageY, SC.names[p[0]], [
+        { k: SC.years.last + " level", v: p[1].toFixed(1) + "%" },
+        { k: "Change", v: (p[2] > 0 ? "+" : "") + p[2].toFixed(1) + "pp" },
+        { k: "Tested", v: p[3] === null ? "—" : p[3].toLocaleString() },
+        { k: "County", v: p[4] >= 0 ? SC.counties[p[4]] : "—" },
+      ], isSelf ? null : "Click for this district's page."));
+      c.addEventListener("mouseleave", hideTip);
+      if (!isSelf) {
+        c.style.cursor = "pointer";
+        c.addEventListener("click", () => { window.location.href = "./" + p[0] + ".html"; });
+      }
+      s.appendChild(c);
+      if (isSelf) {
+        const px = x(p[1]);
+        const anchor = px > W - 140 ? "end" : px < 120 ? "start" : "middle";
+        // Drawn twice: the surface-coloured copy underneath is a halo, because
+        // this label lands in the middle of a dense cloud and would otherwise
+        // read as struck through by whatever dots sit behind it.
+        [{ stroke: surface(), "stroke-width": 4, "stroke-linejoin": "round" }, {}]
+          .forEach((extra) => {
+            s.appendChild(svg("text",
+              Object.assign({ class: "serieslabel", x: px, y: y(p[2]) - 12,
+                "text-anchor": anchor, fill: cssVar("--series-entity") }, extra),
+              DISPLAY_NAME));
+          });
+      }
+    });
+    host.appendChild(s);
+
+    [["self", "This district"], ["county", "Same county"],
+     ["coop", "Same co-operative"], ["other", "Every other district"]].forEach(([key, label]) => {
+      if (!counts[key]) return;
+      legend.appendChild(h("span", { class: "legend-item" }, [
+        h("span", { class: "swatch dot", style: `background:${FILL[key]}` }),
+        `${label} (${counts[key]})`,
+      ]));
+    });
+
+    const missing = !counts.self;
+    note.appendChild(h("span", {}, [
+      `${block.points.length} districts plotted; ${block.n_excluded} are not, because a year is `
+      + `unpublished or an endpoint tested fewer than ${SC.n_floor} students, which makes both the `
+      + `level and the change too volatile to position. `
+      + (missing
+          ? `This district is one of them for ${state.subject}, so it is not marked on the chart. `
+          : "")
+      + "Districts in this county are marked as county peers; they are in this co-operative too. ",
+    ]));
+    // On paper there is nothing to click, so the hint goes with the screen.
+    note.appendChild(h("span", { class: "no-print" }, ["Click any other district for its page."]));
+  }
+
   /* ---------- cohort ---------- */
 
   function renderCohort() {
@@ -738,6 +882,7 @@
     renderLevels();
     renderBenchTable();
     renderDistribution();
+    renderScatter();
     renderCohort();
     const std = state.subject + " \u00b7 " + gradeLabel(state.grade);
     const traj = state.mode === "cohort" && state.grade !== "ALL"
@@ -745,6 +890,12 @@
       : std;
     document.querySelectorAll("[data-selecho]").forEach((el) => {
       el.textContent = traj;
+    });
+    // The scatter is all-grades whatever the grade chips say, so its echo
+    // carries the subject alone -- echoing a grade it does not apply would
+    // claim a filter that is not there.
+    document.querySelectorAll("[data-selecho-subject]").forEach((el) => {
+      el.textContent = state.subject;
     });
     const dynsub = state.mode === "cohort" && state.grade !== "ALL"
       ? `${state.subject} \u2014 following the class that started Grade ${parseInt(state.grade, 10)} in ${YEARS[0]}.`

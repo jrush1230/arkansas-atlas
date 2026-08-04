@@ -41,6 +41,26 @@
   --div-pos-3: #86b6ef;
 }
 
+/* Choropleth. The shapes are Census boundary geometry; every value colouring
+   one is ADE's own published figure, and the sorted list underneath carries
+   those figures in text — the fill is a second reading of the list, never the
+   only one. */
+.maphost svg.map { display: block; width: 100%; max-width: 620px; height: auto;
+  margin: 0 auto; }
+.maphost svg.map .shape { transition: none; }
+.maphost svg.map .shape:hover { stroke: var(--text-primary); stroke-width: 1.4;
+  cursor: default; }
+.maphost .mapnote { color: var(--text-muted); font-size: 12px; margin: 12px 0 0;
+  line-height: 1.55; }
+.scalekey .sw.hatch {
+  background: repeating-linear-gradient(45deg, transparent 0 1.6px,
+    var(--text-secondary) 1.6px 3.4px, transparent 3.4px 5px);
+  border: 1px solid var(--border);
+}
+.listhead { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-muted); font-weight: 600; margin: 26px 0 10px;
+  padding-top: 18px; border-top: 1px solid var(--border); }
+
 /* Sorted diverging rows: name, bar from a centre baseline, value at the end. */
 .rows { display: grid; gap: 2px; }
 .rowitem {
@@ -74,4 +94,8 @@
 
 @media print {
   .rowitem { grid-template-columns: 160px 1fr 56px; font-size: 10pt; }
+  /* The map prints; a printed page has no hover, so the list under it is the
+     only place its numbers exist and must not be broken across the map. */
+  .maphost svg.map { max-width: 4.6in; }
+  .maphost, section { break-inside: avoid; }
 }
