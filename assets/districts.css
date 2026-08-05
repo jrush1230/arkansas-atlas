@@ -1,0 +1,121 @@
+/* District map and ranked table (Step B.2). Loaded after site.css and
+   statewide.css, which between them already supply the surfaces, ink, chrome,
+   chip row, tooltip, table primitives, the diverging change scale and the
+   `.maphost` / `.scalekey` map furniture. This file adds only what is new here:
+   a sequential ramp for the single-year views, and the ranked table's sortable
+   header.
+
+   The sequential ramp is the one approved in `design-reference/
+   district-map-approved.html` — six steps of the site's own entity blue,
+   lightness-monotonic in both modes. It is deliberately a different family from
+   the diverging scale next to it: a single-year level and a three-year change
+   are different quantities, and giving them the same colours would invite
+   reading one as the other. Its breaks are fixed at 10/20/30/40/50 across all
+   three years, so flipping the year chips shows real movement rather than a
+   scale re-fitting itself to each year. */
+
+:root {
+  --seq-1: #e8f0fb;
+  --seq-2: #bcd7f5;
+  --seq-3: #7fb0ec;
+  --seq-4: #3987e5;
+  --seq-5: #1c5aa8;
+  --seq-6: #123c72;
+  --hatch-ink: #b9b6af;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    --seq-1: #213043;
+    --seq-2: #274769;
+    --seq-3: #2f639a;
+    --seq-4: #3987e5;
+    --seq-5: #79aef0;
+    --seq-6: #b8d4f7;
+    --hatch-ink: #55534e;
+  }
+}
+
+:root[data-theme="dark"] {
+  --seq-1: #213043;
+  --seq-2: #274769;
+  --seq-3: #2f639a;
+  --seq-4: #3987e5;
+  --seq-5: #79aef0;
+  --seq-6: #b8d4f7;
+  --hatch-ink: #55534e;
+}
+
+/* The district map is the page's subject rather than one section of it, so it
+   is given more of the column than the statewide page's two maps get. */
+.maphost svg.map.districts { max-width: 760px; }
+.maphost svg.map.districts .shape { cursor: pointer; }
+
+.scalekey .sw.hatch-seq {
+  background: repeating-linear-gradient(45deg, var(--surface-1) 0 3px,
+    var(--hatch-ink) 3px 5px);
+  border: 1px solid var(--border);
+}
+
+/* Ranked table ------------------------------------------------------------
+   Sortable headers carry a visible ⇅ on every sortable column and ▾/▴ on the
+   active one: a column that can be sorted but does not say so is a control
+   only a reader who happens to click it will ever find. */
+
+.ranked-controls { margin: 12px 0 0; font-size: 13px; }
+.ranked-controls a { font-weight: 600; text-decoration: none; }
+.ranked-controls .sep { color: var(--text-muted); margin: 0 6px; }
+
+.rankwrap {
+  margin-top: 12px; max-height: 560px; overflow: auto;
+  border: 1px solid var(--border); border-radius: 8px;
+}
+.rankwrap.closed { display: none; }
+table.ranked { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.ranked th {
+  position: sticky; top: 0; z-index: 1; background: var(--surface-1);
+  text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border);
+  font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--text-muted); font-weight: 600; white-space: nowrap;
+}
+table.ranked th[data-sort] { cursor: pointer; }
+table.ranked th[data-sort]:hover { color: var(--text-primary); }
+table.ranked th.sorted { color: var(--text-primary); }
+table.ranked th .glyph { margin-left: 5px; }
+table.ranked th[data-sort]:not(.sorted) .glyph { opacity: 0.45; }
+table.ranked td {
+  padding: 6px 10px; border-bottom: 1px solid var(--grid);
+  font-variant-numeric: tabular-nums;
+}
+table.ranked td.rank { color: var(--text-muted); width: 3.5em; }
+table.ranked td.name { font-weight: 550; font-variant-numeric: normal; }
+table.ranked td.name a { color: inherit; text-decoration: none;
+  border-bottom: 1px dotted var(--text-muted); }
+table.ranked td.metric { font-weight: 650; }
+table.ranked td.na { color: var(--text-muted); font-style: italic;
+  font-variant-numeric: normal; font-size: 12px; }
+table.ranked .noboundary { color: var(--text-muted); font-size: 11px;
+  font-weight: 400; font-style: italic; }
+
+@media print {
+  /* The table ALWAYS prints, open on screen or not, and the scroll box is
+     unwound so every row lands on paper rather than one screenful of them.
+     This is the Step B.1 rule applied to this page: a state-scale map cannot
+     print a number on any shape, so the list under it is the only place the
+     printed figures exist. A printed district map with the table suppressed
+     would be 234 coloured shapes and not one number.
+
+     The toggle and the CSV link are the only things suppressed — there is
+     nothing to click and nothing to download on paper. */
+  .ranked-controls { display: none; }
+  .rankwrap, .rankwrap.closed {
+    display: block; max-height: none; overflow: visible; border: 0;
+  }
+  table.ranked { font-size: 8.5pt; }
+  table.ranked th { position: static; }
+  /* Sort glyphs are controls. On paper they are ink that promises an
+     interaction the sheet cannot offer — found in the print proof. */
+  table.ranked th .glyph { display: none; }
+  .maphost svg.map.districts { max-width: 5.4in; }
+  .maphost { break-inside: avoid; }
+}
