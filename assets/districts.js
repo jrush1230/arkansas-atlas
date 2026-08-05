@@ -38,7 +38,11 @@
   var LEVEL_STEPS = [10, 20, 30, 40, 50];
   var LEVEL_LABELS = ["under 10%", "10–20%", "20–30%", "30–40%", "40–50%", "50% or better"];
 
-  /* Diverging breaks for the change views, in percentage points. */
+  /* Diverging breaks for the change views, in percentage points. Shared with
+     `statewide.js`'s divColor, which was realigned onto these at Joel's ruling
+     (2026-08-05) so a colour means the same magnitude on both map pages.
+     Moving these means moving that too; `verify.py`'s "both map pages use one
+     diverging scale" check reads both files back and asserts it. */
   var GROWTH_BREAKS = [-9, -6, -2, 2, 6, 9];
   var GROWTH_LABELS = ["−9 or worse", "−9 to −6", "−6 to −2", "under ±2",
     "+2 to +6", "+6 to +9", "+9 or better"];

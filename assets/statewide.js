@@ -44,13 +44,21 @@
   /* Three steps per arm. The thresholds are round numbers in percentage
      points, not quantiles of the data: a quantile scale would repaint every
      entity whenever the subject changed, and "dark red" would mean something
-     different on each tab. */
+     different on each tab.
+
+     The breaks are +/-2, 6, 9 -- deliberately the same as districts.js's
+     GROWTH_BREAKS, so a colour means the same magnitude on both map pages.
+     They shipped as +/-1, 3, 7 here and +/-2, 6, 9 there; Joel's ruling
+     (2026-08-05) was to align on +/-2, 6, 9. County and co-op changes are
+     smaller than district ones, so these maps read paler than they did --
+     which is the honest result, not a loss: aggregate change IS smaller.
+     Any change here must move GROWTH_BREAKS with it. */
   function divColor(d) {
     if (d === null) return null;
     const a = Math.abs(d);
     const arm = d > 0 ? "pos" : "neg";
-    if (a < 1) return cssVar("--div-zero");
-    const step = a < 3 ? 1 : a < 7 ? 2 : 3;
+    if (a <= 2) return cssVar("--div-zero");
+    const step = a <= 6 ? 1 : a <= 9 ? 2 : 3;
     return cssVar(`--div-${arm}-${step}`);
   }
 
@@ -86,13 +94,13 @@
   function scaleKey() {
     return h("div", { class: "scalekey" }, [
       "Change in percentage points:",
-      h("span", { class: "sw", style: `background:${cssVar("--div-neg-3")}` }), "−7 or worse",
-      h("span", { class: "sw", style: `background:${cssVar("--div-neg-2")}` }), "−3",
-      h("span", { class: "sw", style: `background:${cssVar("--div-neg-1")}` }), "−1",
-      h("span", { class: "sw", style: `background:${cssVar("--div-zero")};border:1px solid var(--border)` }), "under ±1",
-      h("span", { class: "sw", style: `background:${cssVar("--div-pos-1")}` }), "+1",
-      h("span", { class: "sw", style: `background:${cssVar("--div-pos-2")}` }), "+3",
-      h("span", { class: "sw", style: `background:${cssVar("--div-pos-3")}` }), "+7 or better",
+      h("span", { class: "sw", style: `background:${cssVar("--div-neg-3")}` }), "−9 or worse",
+      h("span", { class: "sw", style: `background:${cssVar("--div-neg-2")}` }), "−9 to −6",
+      h("span", { class: "sw", style: `background:${cssVar("--div-neg-1")}` }), "−6 to −2",
+      h("span", { class: "sw", style: `background:${cssVar("--div-zero")};border:1px solid var(--border)` }), "under ±2",
+      h("span", { class: "sw", style: `background:${cssVar("--div-pos-1")}` }), "+2 to +6",
+      h("span", { class: "sw", style: `background:${cssVar("--div-pos-2")}` }), "+6 to +9",
+      h("span", { class: "sw", style: `background:${cssVar("--div-pos-3")}` }), "+9 or better",
       h("span", { class: "sw hatch" }), "no change figure",
     ]);
   }
