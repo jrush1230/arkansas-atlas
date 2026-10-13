@@ -32,7 +32,12 @@
  "release": {
   "2024": "ATLAS Summary Post-Appeals Scores Spring 2024",
   "2025": "ATLAS Summary Post-Corrections Scores Spring 2025 (XLSX)",
-  "2026": "ATLAS Summary Pre-Appeals Scores Spring 2026 (XLSX)"
+  "2026": "ATLAS Summary Post-Corrections Scores by Grade Spring 2026 (XLSX)"
+ },
+ "release_stage": {
+  "2024": "Final",
+  "2025": "Final",
+  "2026": "Final (Post-Corrections, posted 2026-08-20)"
  },
  "trend": {
   "ELA": {
@@ -51,7 +56,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 129.0,
@@ -67,20 +73,21 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
-     "n_tested": 137.0,
-     "pct_proficient": 56.2044,
+     "n_tested": 138.0,
+     "pct_proficient": 55.7971,
      "pct_levels": [
-      10.219,
-      33.5766,
-      37.2263,
-      18.9781
+      10.1449,
+      34.058,
+      36.9565,
+      18.8406
      ],
      "n_levels": [
       14,
-      46,
+      47,
       51,
       26
      ],
@@ -88,7 +95,8 @@
      "pct_basis": "counts",
      "small_n": false,
      "status": null,
-     "counts_status": null
+     "counts_status": null,
+     "n_status": null
     }
    },
    "03": {
@@ -106,7 +114,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 81.0,
@@ -122,23 +131,20 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
-     "n_tested": 60.0,
-     "pct_proficient": 55.0,
-     "pct_levels": [
-      6.7,
-      38.3,
-      38.3,
-      16.7
-     ],
+     "n_tested": null,
+     "pct_proficient": null,
+     "pct_levels": null,
      "n_levels": null,
      "n_proficient": null,
-     "pct_basis": "published_pct",
-     "small_n": false,
-     "status": null,
-     "counts_status": "counts_suppressed"
+     "pct_basis": null,
+     "small_n": null,
+     "status": "rv",
+     "counts_status": "rv",
+     "n_status": null
     }
    },
    "04": {
@@ -156,7 +162,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 48.0,
@@ -172,7 +179,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
      "n_tested": 77.0,
@@ -193,7 +201,8 @@
      "pct_basis": "counts",
      "small_n": false,
      "status": null,
-     "counts_status": null
+     "counts_status": null,
+     "n_status": null
     }
    }
   },
@@ -213,7 +222,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 129.0,
@@ -229,20 +239,21 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
-     "n_tested": 137.0,
-     "pct_proficient": 52.5547,
+     "n_tested": 138.0,
+     "pct_proficient": 52.1739,
      "pct_levels": [
-      10.9489,
-      36.4964,
-      35.7664,
-      16.7883
+      10.8696,
+      36.9565,
+      35.5072,
+      16.6667
      ],
      "n_levels": [
       15,
-      50,
+      51,
       49,
       23
      ],
@@ -250,7 +261,8 @@
      "pct_basis": "counts",
      "small_n": false,
      "status": null,
-     "counts_status": null
+     "counts_status": null,
+     "n_status": null
     }
    },
    "03": {
@@ -268,7 +280,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 81.0,
@@ -284,23 +297,20 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
-     "n_tested": 60.0,
-     "pct_proficient": 50.0,
-     "pct_levels": [
-      8.3,
-      41.7,
-      31.7,
-      18.3
-     ],
+     "n_tested": null,
+     "pct_proficient": null,
+     "pct_levels": null,
      "n_levels": null,
      "n_proficient": null,
-     "pct_basis": "published_pct",
-     "small_n": false,
-     "status": null,
-     "counts_status": "counts_suppressed"
+     "pct_basis": null,
+     "small_n": null,
+     "status": "rv",
+     "counts_status": "rv",
+     "n_status": null
     }
    },
    "04": {
@@ -318,7 +328,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 48.0,
@@ -334,7 +345,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
      "n_tested": 77.0,
@@ -355,7 +367,8 @@
      "pct_basis": "counts",
      "small_n": false,
      "status": null,
-     "counts_status": null
+     "counts_status": null,
+     "n_status": null
     }
    }
   },
@@ -375,7 +388,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 129.0,
@@ -391,28 +405,30 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
-     "n_tested": 137.0,
-     "pct_proficient": 63.5036,
+     "n_tested": 138.0,
+     "pct_proficient": 63.7681,
      "pct_levels": [
-      8.7591,
-      27.7372,
-      40.146,
-      23.3577
+      8.6957,
+      27.5362,
+      40.5797,
+      23.1884
      ],
      "n_levels": [
       12,
       38,
-      55,
+      56,
       32
      ],
-     "n_proficient": 87,
+     "n_proficient": 88,
      "pct_basis": "counts",
      "small_n": false,
      "status": null,
-     "counts_status": null
+     "counts_status": null,
+     "n_status": null
     }
    },
    "03": {
@@ -430,7 +446,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 81.0,
@@ -446,23 +463,20 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
-     "n_tested": 60.0,
-     "pct_proficient": 65.0,
-     "pct_levels": [
-      8.3,
-      26.7,
-      43.3,
-      21.7
-     ],
+     "n_tested": null,
+     "pct_proficient": null,
+     "pct_levels": null,
      "n_levels": null,
      "n_proficient": null,
-     "pct_basis": "published_pct",
-     "small_n": false,
-     "status": null,
-     "counts_status": "counts_suppressed"
+     "pct_basis": null,
+     "small_n": null,
+     "status": "rv",
+     "counts_status": "rv",
+     "n_status": null
     }
    },
    "04": {
@@ -480,7 +494,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 48.0,
@@ -496,23 +511,20 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
-     "n_tested": 77.0,
-     "pct_proficient": 62.4,
-     "pct_levels": [
-      9.1,
-      28.6,
-      37.7,
-      24.7
-     ],
+     "n_tested": null,
+     "pct_proficient": null,
+     "pct_levels": null,
      "n_levels": null,
      "n_proficient": null,
-     "pct_basis": "published_pct",
-     "small_n": false,
-     "status": null,
-     "counts_status": "counts_suppressed"
+     "pct_basis": null,
+     "small_n": null,
+     "status": "rv",
+     "counts_status": "rv",
+     "n_status": null
     }
    }
   },
@@ -532,7 +544,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 129.0,
@@ -548,23 +561,20 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
-     "n_tested": 137.0,
-     "pct_proficient": 63.5,
-     "pct_levels": [
-      5.1,
-      31.4,
-      40.9,
-      22.6
-     ],
+     "n_tested": null,
+     "pct_proficient": null,
+     "pct_levels": null,
      "n_levels": null,
      "n_proficient": null,
-     "pct_basis": "published_pct",
-     "small_n": false,
-     "status": null,
-     "counts_status": "counts_suppressed"
+     "pct_basis": null,
+     "small_n": null,
+     "status": "rv",
+     "counts_status": "rv",
+     "n_status": null
     }
    },
    "03": {
@@ -582,7 +592,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 81.0,
@@ -598,23 +609,20 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
-     "n_tested": 60.0,
-     "pct_proficient": 70.0,
-     "pct_levels": [
-      3.3,
-      26.7,
-      40.0,
-      30.0
-     ],
+     "n_tested": null,
+     "pct_proficient": 68.9,
+     "pct_levels": null,
      "n_levels": null,
      "n_proficient": null,
      "pct_basis": "published_pct",
-     "small_n": false,
+     "small_n": null,
      "status": null,
-     "counts_status": "counts_suppressed"
+     "counts_status": "counts_suppressed",
+     "n_status": "n_not_published"
     }
    },
    "04": {
@@ -632,7 +640,8 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": 48.0,
@@ -648,23 +657,20 @@
      "pct_basis": "published_pct",
      "small_n": false,
      "status": null,
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
-     "n_tested": 77.0,
-     "pct_proficient": 58.5,
-     "pct_levels": [
-      6.5,
-      35.1,
-      41.6,
-      16.9
-     ],
+     "n_tested": null,
+     "pct_proficient": null,
+     "pct_levels": null,
      "n_levels": null,
      "n_proficient": null,
-     "pct_basis": "published_pct",
-     "small_n": false,
-     "status": null,
-     "counts_status": "counts_suppressed"
+     "pct_basis": null,
+     "small_n": null,
+     "status": "rv",
+     "counts_status": "rv",
+     "n_status": null
     }
    }
   },
@@ -679,7 +685,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "n_lt_10",
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": null,
@@ -690,7 +697,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "n_lt_10",
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
      "n_tested": null,
@@ -701,7 +709,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "n_lt_10",
-     "counts_status": "n_lt_10"
+     "counts_status": "n_lt_10",
+     "n_status": null
     }
    },
    "03": {
@@ -714,7 +723,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2025": {
      "n_tested": null,
@@ -725,7 +735,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2026": {
      "n_tested": null,
@@ -736,7 +747,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     }
    },
    "04": {
@@ -749,7 +761,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2025": {
      "n_tested": null,
@@ -760,7 +773,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2026": {
      "n_tested": null,
@@ -771,7 +785,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     }
    }
   },
@@ -786,7 +801,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "n_lt_10",
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": null,
@@ -797,7 +813,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "n_lt_10",
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
      "n_tested": null,
@@ -808,7 +825,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "n_lt_10",
-     "counts_status": "n_lt_10"
+     "counts_status": "n_lt_10",
+     "n_status": null
     }
    },
    "03": {
@@ -821,7 +839,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2025": {
      "n_tested": null,
@@ -832,7 +851,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2026": {
      "n_tested": null,
@@ -843,7 +863,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     }
    },
    "04": {
@@ -856,7 +877,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2025": {
      "n_tested": null,
@@ -867,7 +889,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2026": {
      "n_tested": null,
@@ -878,7 +901,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     }
    }
   },
@@ -893,7 +917,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "n_lt_10",
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2025": {
      "n_tested": null,
@@ -904,7 +929,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "n_lt_10",
-     "counts_status": "counts_not_published"
+     "counts_status": "counts_not_published",
+     "n_status": null
     },
     "2026": {
      "n_tested": null,
@@ -915,7 +941,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "n_lt_10",
-     "counts_status": "n_lt_10"
+     "counts_status": "n_lt_10",
+     "n_status": null
     }
    },
    "03": {
@@ -928,7 +955,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2025": {
      "n_tested": null,
@@ -939,7 +967,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2026": {
      "n_tested": null,
@@ -950,7 +979,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     }
    },
    "04": {
@@ -963,7 +993,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2025": {
      "n_tested": null,
@@ -974,7 +1005,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     },
     "2026": {
      "n_tested": null,
@@ -985,7 +1017,8 @@
      "pct_basis": null,
      "small_n": null,
      "status": "not_offered",
-     "counts_status": "not_offered"
+     "counts_status": "not_offered",
+     "n_status": null
     }
    }
   }
@@ -1026,7 +1059,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 1115.0,
@@ -1042,7 +1076,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 10367.0,
@@ -1058,7 +1093,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 289871.0,
@@ -1074,7 +1110,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -1092,7 +1129,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 1127.0,
@@ -1108,7 +1146,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 10356.0,
@@ -1124,7 +1163,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 288561.0,
@@ -1140,43 +1180,45 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 462.0,
-      "pct_proficient": 57.7922,
+      "n_tested": 464.0,
+      "pct_proficient": 57.7586,
       "pct_levels": [
-       9.3074,
-       32.9004,
-       36.7965,
-       20.9957
+       9.2672,
+       32.9741,
+       36.8534,
+       20.9052
       ],
       "n_levels": [
        43,
-       152,
-       170,
+       153,
+       171,
        97
       ],
-      "n_proficient": 267,
+      "n_proficient": 268,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "county": {
-      "n_tested": 1085.0,
-      "pct_proficient": 42.765,
+      "n_tested": 1084.0,
+      "pct_proficient": 42.8044,
       "pct_levels": [
-       20.6452,
-       36.5899,
-       29.5853,
-       13.1797
+       20.6642,
+       36.5314,
+       29.6125,
+       13.1919
       ],
       "n_levels": [
        224,
-       397,
+       396,
        321,
        143
       ],
@@ -1184,49 +1226,52 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
-      "n_tested": 10171.0,
-      "pct_proficient": 37.4889,
+      "n_tested": 10172.0,
+      "pct_proficient": 37.5049,
       "pct_levels": [
-       21.8956,
-       40.6155,
-       26.5166,
-       10.9724
+       21.8836,
+       40.6115,
+       26.5238,
+       10.9811
       ],
       "n_levels": [
-       2227,
+       2226,
        4131,
-       2697,
-       1116
+       2698,
+       1117
       ],
-      "n_proficient": 3813,
+      "n_proficient": 3815,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 283571.0,
-      "pct_proficient": 39.4801,
+      "n_tested": 283144.0,
+      "pct_proficient": 39.4686,
       "pct_levels": [
-       22.7573,
-       37.7627,
-       26.0429,
-       13.4372
+       22.7679,
+       37.7635,
+       26.0316,
+       13.437
       ],
       "n_levels": [
-       64533,
-       107084,
-       73850,
-       38104
+       64466,
+       106925,
+       73707,
+       38046
       ],
-      "n_proficient": 111954,
+      "n_proficient": 111753,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -1246,7 +1291,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 142.0,
@@ -1262,7 +1308,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1250.0,
@@ -1278,7 +1325,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35286.0,
@@ -1294,7 +1342,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -1312,7 +1361,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 172.0,
@@ -1328,7 +1378,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1360.0,
@@ -1344,7 +1395,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 36131.0,
@@ -1360,38 +1412,35 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 60.0,
-      "pct_proficient": 55.0,
-      "pct_levels": [
-       6.7,
-       38.3,
-       38.3,
-       16.7
-      ],
+      "n_tested": null,
+      "pct_proficient": null,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
-      "pct_basis": "published_pct",
-      "small_n": false,
-      "status": null,
-      "counts_status": "counts_suppressed"
+      "pct_basis": null,
+      "small_n": null,
+      "status": "rv",
+      "counts_status": "rv",
+      "n_status": null
      },
      "county": {
-      "n_tested": 158.0,
-      "pct_proficient": 41.7722,
+      "n_tested": 159.0,
+      "pct_proficient": 41.5094,
       "pct_levels": [
-       22.1519,
-       36.0759,
-       30.3797,
-       11.3924
+       22.0126,
+       36.478,
+       30.1887,
+       11.3208
       ],
       "n_levels": [
        35,
-       57,
+       58,
        48,
        18
       ],
@@ -1399,20 +1448,21 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
-      "n_tested": 1291.0,
-      "pct_proficient": 42.5252,
+      "n_tested": 1293.0,
+      "pct_proficient": 42.4594,
       "pct_levels": [
-       20.3718,
-       37.103,
-       27.8079,
-       14.7173
+       20.3403,
+       37.2003,
+       27.7649,
+       14.6945
       ],
       "n_levels": [
        263,
-       479,
+       481,
        359,
        190
       ],
@@ -1420,28 +1470,30 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 34463.0,
-      "pct_proficient": 42.8489,
+      "n_tested": 34418.0,
+      "pct_proficient": 42.8468,
       "pct_levels": [
-       22.456,
-       34.6952,
-       24.9746,
-       17.8742
+       22.4592,
+       34.6941,
+       24.9608,
+       17.886
       ],
       "n_levels": [
-       7739,
-       11957,
-       8607,
-       6160
+       7730,
+       11941,
+       8591,
+       6156
       ],
-      "n_proficient": 14767,
+      "n_proficient": 14747,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -1461,7 +1513,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 144.0,
@@ -1477,7 +1530,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1267.0,
@@ -1493,7 +1547,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35442.0,
@@ -1509,7 +1564,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -1527,7 +1583,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 142.0,
@@ -1543,7 +1600,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1245.0,
@@ -1559,7 +1617,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35257.0,
@@ -1575,7 +1634,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
@@ -1598,7 +1658,8 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "county": {
       "n_tested": 161.0,
@@ -1619,7 +1680,8 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
       "n_tested": 1366.0,
@@ -1640,28 +1702,30 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 35744.0,
-      "pct_proficient": 41.4615,
+      "n_tested": 35694.0,
+      "pct_proficient": 41.4551,
       "pct_levels": [
-       22.8906,
-       35.6479,
-       25.9372,
-       15.5243
+       22.9086,
+       35.6362,
+       25.9203,
+       15.5348
       ],
       "n_levels": [
-       8182,
-       12742,
-       9271,
-       5549
+       8177,
+       12720,
+       9252,
+       5545
       ],
-      "n_proficient": 14820,
+      "n_proficient": 14797,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    }
@@ -1683,7 +1747,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 1116.0,
@@ -1699,7 +1764,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 10378.0,
@@ -1715,7 +1781,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 290714.0,
@@ -1731,7 +1798,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -1749,7 +1817,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 1128.0,
@@ -1765,7 +1834,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 10361.0,
@@ -1781,7 +1851,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 288863.0,
@@ -1797,43 +1868,45 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 462.0,
-      "pct_proficient": 56.0606,
+      "n_tested": 464.0,
+      "pct_proficient": 56.0345,
       "pct_levels": [
-       10.3896,
-       33.5498,
-       37.2294,
-       18.8312
+       10.3448,
+       33.6207,
+       37.2845,
+       18.75
       ],
       "n_levels": [
        48,
-       155,
-       172,
+       156,
+       173,
        87
       ],
-      "n_proficient": 259,
+      "n_proficient": 260,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "county": {
-      "n_tested": 1085.0,
-      "pct_proficient": 42.4885,
+      "n_tested": 1084.0,
+      "pct_proficient": 42.5277,
       "pct_levels": [
-       21.2903,
-       36.2212,
-       28.2949,
-       14.1935
+       21.31,
+       36.1624,
+       28.321,
+       14.2066
       ],
       "n_levels": [
        231,
-       393,
+       392,
        307,
        154
       ],
@@ -1841,49 +1914,52 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
       "n_tested": 10174.0,
-      "pct_proficient": 39.3454,
+      "pct_proficient": 39.365,
       "pct_levels": [
-       22.5673,
-       38.0873,
-       26.5087,
-       12.8366
+       22.5378,
+       38.0971,
+       26.5186,
+       12.8465
       ],
       "n_levels": [
-       2296,
-       3875,
-       2697,
-       1306
+       2293,
+       3876,
+       2698,
+       1307
       ],
-      "n_proficient": 4003,
+      "n_proficient": 4005,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 283765.0,
-      "pct_proficient": 40.4747,
+      "n_tested": 283715.0,
+      "pct_proficient": 40.4741,
       "pct_levels": [
-       22.9211,
-       36.6042,
-       25.5306,
-       14.9441
+       22.9212,
+       36.6047,
+       25.5313,
+       14.9428
       ],
       "n_levels": [
-       65042,
-       103870,
-       72447,
-       42406
+       65031,
+       103853,
+       72436,
+       42395
       ],
-      "n_proficient": 114853,
+      "n_proficient": 114831,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -1903,7 +1979,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 142.0,
@@ -1919,7 +1996,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1251.0,
@@ -1935,7 +2013,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35352.0,
@@ -1951,7 +2030,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -1969,7 +2049,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 172.0,
@@ -1985,7 +2066,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1361.0,
@@ -2001,7 +2083,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 36158.0,
@@ -2017,38 +2100,35 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 60.0,
-      "pct_proficient": 50.0,
-      "pct_levels": [
-       8.3,
-       41.7,
-       31.7,
-       18.3
-      ],
+      "n_tested": null,
+      "pct_proficient": null,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
-      "pct_basis": "published_pct",
-      "small_n": false,
-      "status": null,
-      "counts_status": "counts_suppressed"
+      "pct_basis": null,
+      "small_n": null,
+      "status": "rv",
+      "counts_status": "rv",
+      "n_status": null
      },
      "county": {
-      "n_tested": 158.0,
-      "pct_proficient": 40.5063,
+      "n_tested": 159.0,
+      "pct_proficient": 40.2516,
       "pct_levels": [
-       19.6203,
-       39.8734,
-       25.3165,
-       15.1899
+       19.4969,
+       40.2516,
+       25.1572,
+       15.0943
       ],
       "n_levels": [
        31,
-       63,
+       64,
        40,
        24
       ],
@@ -2056,20 +2136,21 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
-      "n_tested": 1291.0,
-      "pct_proficient": 42.9899,
+      "n_tested": 1293.0,
+      "pct_proficient": 42.9234,
       "pct_levels": [
-       21.7661,
-       35.244,
-       27.5755,
-       15.4144
+       21.7324,
+       35.3442,
+       27.5329,
+       15.3906
       ],
       "n_levels": [
        281,
-       455,
+       457,
        356,
        199
       ],
@@ -2077,28 +2158,30 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
       "n_tested": 34479.0,
-      "pct_proficient": 43.0581,
+      "pct_proficient": 43.0552,
       "pct_levels": [
-       22.3846,
+       22.3875,
        34.5573,
-       23.8638,
+       23.8609,
        19.1943
       ],
       "n_levels": [
-       7718,
+       7719,
        11915,
-       8228,
+       8227,
        6618
       ],
-      "n_proficient": 14846,
+      "n_proficient": 14845,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -2118,7 +2201,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 144.0,
@@ -2134,7 +2218,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1268.0,
@@ -2150,7 +2235,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35515.0,
@@ -2166,7 +2252,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -2184,7 +2271,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 142.0,
@@ -2200,7 +2288,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1245.0,
@@ -2216,7 +2305,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35274.0,
@@ -2232,7 +2322,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
@@ -2255,7 +2346,8 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "county": {
       "n_tested": 161.0,
@@ -2276,7 +2368,8 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
       "n_tested": 1367.0,
@@ -2297,7 +2390,8 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
       "n_tested": 35760.0,
@@ -2318,7 +2412,8 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    }
@@ -2340,7 +2435,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 812.0,
@@ -2356,7 +2452,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 7536.0,
@@ -2372,7 +2469,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 206072.0,
@@ -2388,7 +2486,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -2406,7 +2505,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 823.0,
@@ -2422,7 +2522,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 7563.0,
@@ -2438,7 +2539,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 205139.0,
@@ -2454,43 +2556,45 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 357.0,
-      "pct_proficient": 69.4678,
+      "n_tested": 359.0,
+      "pct_proficient": 69.6379,
       "pct_levels": [
-       9.5238,
-       21.0084,
-       35.014,
-       34.4538
+       9.4708,
+       20.8914,
+       35.376,
+       34.2618
       ],
       "n_levels": [
        34,
        75,
-       125,
+       127,
        123
       ],
-      "n_proficient": 248,
+      "n_proficient": 250,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "county": {
-      "n_tested": 841.0,
-      "pct_proficient": 50.1784,
+      "n_tested": 839.0,
+      "pct_proficient": 50.298,
       "pct_levels": [
-       21.4031,
-       28.4185,
-       30.44,
-       19.7384
+       21.3349,
+       28.3671,
+       30.5125,
+       19.7855
       ],
       "n_levels": [
-       180,
-       239,
+       179,
+       238,
        256,
        166
       ],
@@ -2498,49 +2602,52 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
-      "n_tested": 7533.0,
-      "pct_proficient": 45.1746,
+      "n_tested": 7531.0,
+      "pct_proficient": 45.2397,
       "pct_levels": [
-       21.0142,
-       33.8112,
-       28.1827,
-       16.9919
+       20.9534,
+       33.8069,
+       28.2433,
+       16.9964
       ],
       "n_levels": [
-       1583,
-       2547,
-       2123,
+       1578,
+       2546,
+       2127,
        1280
       ],
-      "n_proficient": 3403,
+      "n_proficient": 3407,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 202366.0,
-      "pct_proficient": 44.1072,
+      "n_tested": 202044.0,
+      "pct_proficient": 44.1176,
       "pct_levels": [
-       24.3751,
-       31.5176,
-       26.7377,
-       17.3695
+       24.3694,
+       31.5129,
+       26.7437,
+       17.3739
       ],
       "n_levels": [
-       49327,
-       63781,
-       54108,
-       35150
+       49237,
+       63670,
+       54034,
+       35103
       ],
-      "n_proficient": 89258,
+      "n_proficient": 89137,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -2560,7 +2667,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 142.0,
@@ -2576,7 +2684,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1250.0,
@@ -2592,7 +2701,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35342.0,
@@ -2608,7 +2718,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -2626,7 +2737,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 172.0,
@@ -2642,7 +2754,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1361.0,
@@ -2658,7 +2771,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 36147.0,
@@ -2674,88 +2788,88 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 60.0,
-      "pct_proficient": 65.0,
-      "pct_levels": [
-       8.3,
-       26.7,
-       43.3,
-       21.7
-      ],
+      "n_tested": null,
+      "pct_proficient": null,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
-      "pct_basis": "published_pct",
-      "small_n": false,
-      "status": null,
-      "counts_status": "counts_suppressed"
+      "pct_basis": null,
+      "small_n": null,
+      "status": "rv",
+      "counts_status": "rv",
+      "n_status": null
      },
      "county": {
-      "n_tested": 158.0,
-      "pct_proficient": 46.8354,
+      "n_tested": 159.0,
+      "pct_proficient": 47.1698,
       "pct_levels": [
-       22.7848,
-       30.3797,
-       36.0759,
-       10.7595
+       22.6415,
+       30.1887,
+       36.478,
+       10.6918
       ],
       "n_levels": [
        36,
        48,
-       57,
+       58,
        17
       ],
-      "n_proficient": 74,
+      "n_proficient": 75,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
-      "n_tested": 1292.0,
-      "pct_proficient": 42.4149,
+      "n_tested": 1294.0,
+      "pct_proficient": 42.4266,
       "pct_levels": [
-       19.5046,
-       38.0805,
-       28.4056,
-       14.0093
+       19.4745,
+       38.0989,
+       28.4389,
+       13.9876
       ],
       "n_levels": [
        252,
-       492,
-       367,
+       493,
+       368,
        181
       ],
-      "n_proficient": 548,
+      "n_proficient": 549,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 34468.0,
-      "pct_proficient": 45.4276,
+      "n_tested": 34420.0,
+      "pct_proficient": 45.4561,
       "pct_levels": [
-       21.3241,
-       33.2482,
-       28.5772,
-       16.8504
+       21.2899,
+       33.2539,
+       28.5851,
+       16.871
       ],
       "n_levels": [
-       7350,
-       11460,
-       9850,
-       5808
+       7328,
+       11446,
+       9839,
+       5807
       ],
-      "n_proficient": 15658,
+      "n_proficient": 15646,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -2775,7 +2889,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 144.0,
@@ -2791,7 +2906,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1267.0,
@@ -2807,7 +2923,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35510.0,
@@ -2823,7 +2940,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -2841,7 +2959,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 142.0,
@@ -2857,7 +2976,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1245.0,
@@ -2873,7 +2993,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35279.0,
@@ -2889,38 +3010,35 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 77.0,
-      "pct_proficient": 62.4,
-      "pct_levels": [
-       9.1,
-       28.6,
-       37.7,
-       24.7
-      ],
+      "n_tested": null,
+      "pct_proficient": null,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
-      "pct_basis": "published_pct",
-      "small_n": false,
-      "status": null,
-      "counts_status": "counts_suppressed"
+      "pct_basis": null,
+      "small_n": null,
+      "status": "rv",
+      "counts_status": "rv",
+      "n_status": null
      },
      "county": {
-      "n_tested": 162.0,
-      "pct_proficient": 50.6173,
+      "n_tested": 161.0,
+      "pct_proficient": 50.9317,
       "pct_levels": [
-       11.7284,
-       37.6543,
-       32.716,
-       17.9012
+       11.8012,
+       37.2671,
+       32.9193,
+       18.0124
       ],
       "n_levels": [
        19,
-       61,
+       60,
        53,
        29
       ],
@@ -2928,7 +3046,8 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
       "n_tested": 1366.0,
@@ -2949,28 +3068,30 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 35744.0,
-      "pct_proficient": 47.0037,
+      "n_tested": 35694.0,
+      "pct_proficient": 47.0219,
       "pct_levels": [
-       21.9869,
-       31.0094,
-       28.3628,
-       18.6409
+       21.9981,
+       30.98,
+       28.3689,
+       18.653
       ],
       "n_levels": [
-       7859,
-       11084,
-       10138,
-       6663
+       7852,
+       11058,
+       10126,
+       6658
       ],
-      "n_proficient": 16801,
+      "n_proficient": 16784,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    }
@@ -2992,7 +3113,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 834.0,
@@ -3008,7 +3130,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 7740.0,
@@ -3024,7 +3147,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 214432.0,
@@ -3040,7 +3164,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -3058,7 +3183,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 849.0,
@@ -3074,7 +3200,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 7749.0,
@@ -3090,7 +3217,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 213978.0,
@@ -3106,93 +3234,98 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 357.0,
-      "pct_proficient": 54.6218,
+      "n_tested": 359.0,
+      "pct_proficient": 54.5961,
       "pct_levels": [
-       12.605,
-       32.7731,
-       36.1345,
-       18.4874
+       12.5348,
+       32.8691,
+       36.2117,
+       18.3844
       ],
       "n_levels": [
        45,
-       117,
-       129,
+       118,
+       130,
        66
       ],
-      "n_proficient": 195,
+      "n_proficient": 196,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "county": {
-      "n_tested": 842.0,
-      "pct_proficient": 39.7862,
+      "n_tested": 839.0,
+      "pct_proficient": 39.8093,
       "pct_levels": [
-       21.3777,
-       38.8361,
-       26.8409,
-       12.9454
+       21.2157,
+       38.975,
+       26.8176,
+       12.9917
       ],
       "n_levels": [
-       180,
+       178,
        327,
-       226,
+       225,
        109
       ],
-      "n_proficient": 335,
+      "n_proficient": 334,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
-      "n_tested": 7735.0,
-      "pct_proficient": 43.4518,
+      "n_tested": 7733.0,
+      "pct_proficient": 43.476,
       "pct_levels": [
-       20.8662,
-       35.682,
-       27.744,
-       15.7078
+       20.8457,
+       35.6783,
+       27.7512,
+       15.7248
       ],
       "n_levels": [
-       1614,
-       2760,
+       1612,
+       2759,
        2146,
-       1215
+       1216
       ],
-      "n_proficient": 3361,
+      "n_proficient": 3362,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 210722.0,
-      "pct_proficient": 43.9916,
+      "n_tested": 210709.0,
+      "pct_proficient": 43.9924,
       "pct_levels": [
-       22.402,
-       33.6064,
-       26.1045,
-       17.8871
+       22.4015,
+       33.6061,
+       26.1052,
+       17.8872
       ],
       "n_levels": [
-       47206,
-       70816,
-       55008,
-       37692
+       47202,
+       70811,
+       55006,
+       37690
       ],
-      "n_proficient": 92700,
+      "n_proficient": 92696,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -3212,7 +3345,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 142.0,
@@ -3228,7 +3362,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1249.0,
@@ -3244,7 +3379,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35333.0,
@@ -3260,7 +3396,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -3278,7 +3415,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 172.0,
@@ -3294,7 +3432,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1360.0,
@@ -3310,7 +3449,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 36140.0,
@@ -3326,38 +3466,35 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 60.0,
-      "pct_proficient": 70.0,
-      "pct_levels": [
-       3.3,
-       26.7,
-       40.0,
-       30.0
-      ],
+      "n_tested": null,
+      "pct_proficient": 68.9,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
       "pct_basis": "published_pct",
-      "small_n": false,
+      "small_n": null,
       "status": null,
-      "counts_status": "counts_suppressed"
+      "counts_status": "counts_suppressed",
+      "n_status": "n_not_published"
      },
      "county": {
-      "n_tested": 158.0,
-      "pct_proficient": 42.4051,
+      "n_tested": 159.0,
+      "pct_proficient": 42.1384,
       "pct_levels": [
-       20.2532,
-       37.3418,
-       26.5823,
-       15.8228
+       20.1258,
+       37.7358,
+       26.4151,
+       15.7233
       ],
       "n_levels": [
        32,
-       59,
+       60,
        42,
        25
       ],
@@ -3365,20 +3502,21 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
-      "n_tested": 1292.0,
-      "pct_proficient": 46.517,
+      "n_tested": 1294.0,
+      "pct_proficient": 46.4451,
       "pct_levels": [
-       18.3437,
-       35.1393,
-       30.2632,
-       16.2539
+       18.3153,
+       35.2396,
+       30.2164,
+       16.2287
       ],
       "n_levels": [
        237,
-       454,
+       456,
        391,
        210
       ],
@@ -3386,20 +3524,21 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 34410.0,
-      "pct_proficient": 45.4635,
+      "n_tested": 34408.0,
+      "pct_proficient": 45.4662,
       "pct_levels": [
-       21.3455,
-       33.1909,
-       28.0442,
-       17.4194
+       21.3468,
+       33.187,
+       28.0458,
+       17.4204
       ],
       "n_levels": [
        7345,
-       11421,
+       11419,
        9650,
        5994
       ],
@@ -3407,7 +3546,8 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -3427,7 +3567,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 144.0,
@@ -3443,7 +3584,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1267.0,
@@ -3459,7 +3601,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35498.0,
@@ -3475,7 +3618,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -3493,7 +3637,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 142.0,
@@ -3509,7 +3654,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1245.0,
@@ -3525,7 +3671,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 35269.0,
@@ -3541,46 +3688,44 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 77.0,
-      "pct_proficient": 58.5,
-      "pct_levels": [
-       6.5,
-       35.1,
-       41.6,
-       16.9
-      ],
+      "n_tested": null,
+      "pct_proficient": null,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
-      "pct_basis": "published_pct",
-      "small_n": false,
-      "status": null,
-      "counts_status": "counts_suppressed"
+      "pct_basis": null,
+      "small_n": null,
+      "status": "rv",
+      "counts_status": "rv",
+      "n_status": null
      },
      "county": {
-      "n_tested": 162.0,
-      "pct_proficient": 41.9753,
+      "n_tested": 161.0,
+      "pct_proficient": 41.6149,
       "pct_levels": [
-       15.4321,
-       42.5926,
-       29.6296,
-       12.3457
+       15.528,
+       42.8571,
+       29.1925,
+       12.4224
       ],
       "n_levels": [
        25,
        69,
-       48,
+       47,
        20
       ],
-      "n_proficient": 68,
+      "n_proficient": 67,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
       "n_tested": 1365.0,
@@ -3601,28 +3746,30 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 35689.0,
-      "pct_proficient": 44.4086,
+      "n_tested": 35685.0,
+      "pct_proficient": 44.408,
       "pct_levels": [
-       21.4576,
-       34.1338,
-       27.0335,
-       17.3751
+       21.4572,
+       34.1348,
+       27.0338,
+       17.3742
       ],
       "n_levels": [
-       7658,
-       12182,
-       9648,
-       6201
+       7657,
+       12181,
+       9647,
+       6200
       ],
-      "n_proficient": 15849,
+      "n_proficient": 15847,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    }
@@ -3644,7 +3791,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 151.0,
@@ -3660,7 +3808,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1429.0,
@@ -3676,7 +3825,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 39235.0,
@@ -3692,7 +3842,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -3710,7 +3861,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 138.0,
@@ -3726,7 +3878,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1289.0,
@@ -3742,7 +3895,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 37603.0,
@@ -3758,41 +3912,34 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 51.0,
-      "pct_proficient": 35.3,
-      "pct_levels": [
-       23.5,
-       41.2,
-       19.6,
-       15.7
-      ],
+      "n_tested": null,
+      "pct_proficient": null,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
-      "pct_basis": "published_pct",
-      "small_n": false,
-      "status": null,
-      "counts_status": "counts_suppressed"
+      "pct_basis": null,
+      "small_n": null,
+      "status": "rv",
+      "counts_status": "rv",
+      "n_status": null
      },
      "county": {
-      "n_tested": 104.0,
-      "pct_proficient": 18.3,
-      "pct_levels": [
-       50.0,
-       31.7,
-       10.6,
-       7.7
-      ],
+      "n_tested": null,
+      "pct_proficient": null,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
-      "pct_basis": "published_pct",
-      "small_n": false,
-      "status": null,
-      "counts_status": "counts_suppressed"
+      "pct_basis": null,
+      "small_n": null,
+      "status": "rv",
+      "counts_status": "rv",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1227.0,
@@ -3813,28 +3960,30 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 35963.0,
-      "pct_proficient": 36.8963,
+      "n_tested": 35890.0,
+      "pct_proficient": 36.9184,
       "pct_levels": [
-       32.9478,
-       30.156,
-       19.0335,
-       17.8628
+       32.9228,
+       30.1588,
+       19.0415,
+       17.8768
       ],
       "n_levels": [
-       11849,
-       10845,
-       6845,
-       6424
+       11816,
+       10824,
+       6834,
+       6416
       ],
-      "n_proficient": 13269,
+      "n_proficient": 13250,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -3849,7 +3998,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -3860,7 +4010,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -3871,7 +4022,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -3882,7 +4034,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2025": {
@@ -3895,7 +4048,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -3906,7 +4060,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -3917,7 +4072,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -3928,7 +4084,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2026": {
@@ -3941,7 +4098,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -3952,7 +4110,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -3963,7 +4122,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -3974,7 +4134,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     }
    },
@@ -3989,7 +4150,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4000,7 +4162,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4011,7 +4174,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4022,7 +4186,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2025": {
@@ -4035,7 +4200,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4046,7 +4212,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4057,7 +4224,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4068,7 +4236,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2026": {
@@ -4081,7 +4250,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4092,7 +4262,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4103,7 +4274,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4114,7 +4286,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     }
    }
@@ -4136,7 +4309,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 141.0,
@@ -4152,7 +4326,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1288.0,
@@ -4168,7 +4343,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 38183.0,
@@ -4184,7 +4360,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -4202,7 +4379,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 144.0,
@@ -4218,7 +4396,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1335.0,
@@ -4234,7 +4413,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 37719.0,
@@ -4250,83 +4430,78 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 52.0,
-      "pct_proficient": 34.6,
-      "pct_levels": [
-       34.6,
-       30.8,
-       23.1,
-       11.5
-      ],
+      "n_tested": null,
+      "pct_proficient": null,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
-      "pct_basis": "published_pct",
-      "small_n": false,
-      "status": null,
-      "counts_status": "counts_suppressed"
+      "pct_basis": null,
+      "small_n": null,
+      "status": "rv",
+      "counts_status": "rv",
+      "n_status": null
      },
      "county": {
-      "n_tested": 121.0,
-      "pct_proficient": 22.3,
-      "pct_levels": [
-       45.5,
-       32.2,
-       14.9,
-       7.4
-      ],
+      "n_tested": null,
+      "pct_proficient": null,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
-      "pct_basis": "published_pct",
-      "small_n": false,
-      "status": null,
-      "counts_status": "counts_suppressed"
+      "pct_basis": null,
+      "small_n": null,
+      "status": "rv",
+      "counts_status": "rv",
+      "n_status": null
      },
      "coop": {
-      "n_tested": 1192.0,
-      "pct_proficient": 23.1544,
+      "n_tested": 1188.0,
+      "pct_proficient": 23.3165,
       "pct_levels": [
-       51.3423,
-       25.5034,
-       13.0872,
-       10.0671
+       51.0943,
+       25.5892,
+       13.1313,
+       10.1852
       ],
       "n_levels": [
-       612,
+       607,
        304,
        156,
-       120
+       121
       ],
-      "n_proficient": 276,
+      "n_proficient": 277,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 36537.0,
-      "pct_proficient": 26.3897,
+      "n_tested": 36316.0,
+      "pct_proficient": 26.4016,
       "pct_levels": [
-       50.442,
-       23.1683,
-       13.3235,
-       13.0662
+       50.3662,
+       23.2322,
+       13.366,
+       13.0356
       ],
       "n_levels": [
-       18430,
-       8465,
-       4868,
-       4774
+       18291,
+       8437,
+       4854,
+       4734
       ],
-      "n_proficient": 9642,
+      "n_proficient": 9588,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -4341,7 +4516,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4352,7 +4528,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4363,7 +4540,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4374,7 +4552,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2025": {
@@ -4387,7 +4566,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4398,7 +4578,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4409,7 +4590,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4420,7 +4602,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2026": {
@@ -4433,7 +4616,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4444,7 +4628,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4455,7 +4640,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4466,7 +4652,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     }
    },
@@ -4481,7 +4668,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4492,7 +4680,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4503,7 +4692,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4514,7 +4704,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2025": {
@@ -4527,7 +4718,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4538,7 +4730,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4549,7 +4742,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4560,7 +4754,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2026": {
@@ -4573,7 +4768,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4584,7 +4780,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4595,7 +4792,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4606,7 +4804,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     }
    }
@@ -4628,7 +4827,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 119.0,
@@ -4644,7 +4844,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1232.0,
@@ -4660,7 +4861,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 37196.0,
@@ -4676,7 +4878,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2025": {
@@ -4694,7 +4897,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "county": {
       "n_tested": 150.0,
@@ -4710,7 +4914,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "coop": {
       "n_tested": 1300.0,
@@ -4726,7 +4931,8 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      },
      "state": {
       "n_tested": 36569.0,
@@ -4742,79 +4948,78 @@
       "pct_basis": "published_pct",
       "small_n": false,
       "status": null,
-      "counts_status": "counts_not_published"
+      "counts_status": "counts_not_published",
+      "n_status": null
      }
     },
     "2026": {
      "district": {
-      "n_tested": 52.0,
-      "pct_proficient": 55.8,
-      "pct_levels": [
-       7.7,
-       36.5,
-       30.8,
-       25.0
-      ],
+      "n_tested": null,
+      "pct_proficient": null,
+      "pct_levels": null,
       "n_levels": null,
       "n_proficient": null,
-      "pct_basis": "published_pct",
-      "small_n": false,
-      "status": null,
-      "counts_status": "counts_suppressed"
+      "pct_basis": null,
+      "small_n": null,
+      "status": "rv",
+      "counts_status": "rv",
+      "n_status": null
      },
      "county": {
-      "n_tested": 119.0,
-      "pct_proficient": 42.0168,
+      "n_tested": 121.0,
+      "pct_proficient": 42.1488,
       "pct_levels": [
-       21.8487,
-       36.1345,
-       24.3697,
-       17.6471
+       22.314,
+       35.5372,
+       23.9669,
+       18.1818
       ],
       "n_levels": [
-       26,
+       27,
        43,
        29,
-       21
+       22
       ],
-      "n_proficient": 50,
+      "n_proficient": 51,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "coop": {
-      "n_tested": 1216.0,
-      "pct_proficient": 40.3783,
+      "n_tested": 1217.0,
+      "pct_proficient": 40.5094,
       "pct_levels": [
-       21.6283,
-       37.9934,
-       27.2204,
-       13.1579
+       21.5283,
+       37.9622,
+       27.198,
+       13.3114
       ],
       "n_levels": [
-       263,
+       262,
        462,
        331,
-       160
+       162
       ],
-      "n_proficient": 491,
+      "n_proficient": 493,
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      },
      "state": {
-      "n_tested": 36106.0,
-      "pct_proficient": 42.6965,
+      "n_tested": 36105.0,
+      "pct_proficient": 42.6977,
       "pct_levels": [
-       22.3259,
-       34.9776,
-       25.3614,
-       17.3351
+       22.3238,
+       34.9785,
+       25.3621,
+       17.3355
       ],
       "n_levels": [
-       8061,
+       8060,
        12629,
        9157,
        6259
@@ -4823,7 +5028,8 @@
       "pct_basis": "counts",
       "small_n": false,
       "status": null,
-      "counts_status": null
+      "counts_status": null,
+      "n_status": null
      }
     }
    },
@@ -4838,7 +5044,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4849,7 +5056,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4860,7 +5068,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4871,7 +5080,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2025": {
@@ -4884,7 +5094,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4895,7 +5106,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4906,7 +5118,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4917,7 +5130,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2026": {
@@ -4930,7 +5144,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4941,7 +5156,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -4952,7 +5168,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -4963,7 +5180,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     }
    },
@@ -4978,7 +5196,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -4989,7 +5208,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -5000,7 +5220,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -5011,7 +5232,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2025": {
@@ -5024,7 +5246,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -5035,7 +5258,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -5046,7 +5270,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -5057,7 +5282,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     },
     "2026": {
@@ -5070,7 +5296,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "county": {
       "n_tested": null,
@@ -5081,7 +5308,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "coop": {
       "n_tested": null,
@@ -5092,7 +5320,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      },
      "state": {
       "n_tested": null,
@@ -5103,7 +5332,8 @@
       "pct_basis": null,
       "small_n": null,
       "status": "not_offered",
-      "counts_status": "not_offered"
+      "counts_status": "not_offered",
+      "n_status": null
      }
     }
    }
@@ -5117,6 +5347,7 @@
      "status": null,
      "n": 998,
      "n_excluded_small": 8,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       23.8,
       32.0,
@@ -5129,6 +5360,7 @@
      "status": null,
      "n": 992,
      "n_excluded_small": 21,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       23.9,
       32.9,
@@ -5139,12 +5371,13 @@
     "2026": {
      "band": "top quartile",
      "status": null,
-     "n": 988,
-     "n_excluded_small": 13,
+     "n": 748,
+     "n_excluded_small": 0,
+     "n_excluded_n_not_published": 17,
      "quartiles": [
-      29.1,
-      37.7,
-      47.4
+      33.7,
+      41.0,
+      49.1
      ],
      "peer_grain": "school"
     }
@@ -5155,6 +5388,7 @@
      "status": null,
      "n": 429,
      "n_excluded_small": 36,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       23.9,
       33.8,
@@ -5167,6 +5401,7 @@
      "status": null,
      "n": 424,
      "n_excluded_small": 46,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       22.8,
       34.3,
@@ -5175,16 +5410,10 @@
      "peer_grain": "school"
     },
     "2026": {
-     "band": "top quartile",
-     "status": null,
-     "n": 415,
-     "n_excluded_small": 47,
-     "quartiles": [
-      30.9,
-      41.1,
-      53.7
-     ],
-     "peer_grain": "school"
+     "band": null,
+     "status": "no_distribution",
+     "n": 0,
+     "n_excluded_small": 0
     }
    },
    "04": {
@@ -5193,6 +5422,7 @@
      "status": null,
      "n": 418,
      "n_excluded_small": 46,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       24.7,
       35.3,
@@ -5205,6 +5435,7 @@
      "status": null,
      "n": 420,
      "n_excluded_small": 42,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       26.1,
       37.4,
@@ -5215,12 +5446,13 @@
     "2026": {
      "band": "top quartile",
      "status": null,
-     "n": 409,
-     "n_excluded_small": 51,
+     "n": 156,
+     "n_excluded_small": 0,
+     "n_excluded_n_not_published": 37,
      "quartiles": [
-      30.2,
-      39.0,
-      51.5
+      38.3,
+      47.0,
+      55.2
      ],
      "peer_grain": "school"
     }
@@ -5233,6 +5465,7 @@
      "status": null,
      "n": 998,
      "n_excluded_small": 8,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       24.1,
       31.9,
@@ -5245,6 +5478,7 @@
      "status": null,
      "n": 992,
      "n_excluded_small": 21,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       25.4,
       33.8,
@@ -5255,12 +5489,13 @@
     "2026": {
      "band": "top quartile",
      "status": null,
-     "n": 988,
-     "n_excluded_small": 14,
+     "n": 807,
+     "n_excluded_small": 0,
+     "n_excluded_n_not_published": 17,
      "quartiles": [
-      31.0,
-      39.3,
-      48.1
+      34.0,
+      40.9,
+      49.0
      ],
      "peer_grain": "school"
     }
@@ -5271,6 +5506,7 @@
      "status": null,
      "n": 429,
      "n_excluded_small": 37,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       24.2,
       34.2,
@@ -5283,6 +5519,7 @@
      "status": null,
      "n": 424,
      "n_excluded_small": 46,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       23.2,
       33.3,
@@ -5291,16 +5528,10 @@
      "peer_grain": "school"
     },
     "2026": {
-     "band": "second quartile",
-     "status": null,
-     "n": 415,
-     "n_excluded_small": 47,
-     "quartiles": [
-      32.1,
-      40.9,
-      53.6
-     ],
-     "peer_grain": "school"
+     "band": null,
+     "status": "no_distribution",
+     "n": 0,
+     "n_excluded_small": 0
     }
    },
    "04": {
@@ -5309,6 +5540,7 @@
      "status": null,
      "n": 419,
      "n_excluded_small": 45,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       24.9,
       35.1,
@@ -5321,6 +5553,7 @@
      "status": null,
      "n": 420,
      "n_excluded_small": 41,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       27.1,
       38.8,
@@ -5331,12 +5564,13 @@
     "2026": {
      "band": "top quartile",
      "status": null,
-     "n": 409,
-     "n_excluded_small": 51,
+     "n": 186,
+     "n_excluded_small": 0,
+     "n_excluded_n_not_published": 36,
      "quartiles": [
-      30.0,
-      38.8,
-      51.9
+      38.1,
+      45.9,
+      53.4
      ],
      "peer_grain": "school"
     }
@@ -5349,6 +5583,7 @@
      "status": null,
      "n": 828,
      "n_excluded_small": 15,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       23.0,
       34.0,
@@ -5361,6 +5596,7 @@
      "status": null,
      "n": 826,
      "n_excluded_small": 22,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       25.0,
       37.0,
@@ -5371,12 +5607,13 @@
     "2026": {
      "band": "top quartile",
      "status": null,
-     "n": 817,
-     "n_excluded_small": 20,
+     "n": 592,
+     "n_excluded_small": 0,
+     "n_excluded_n_not_published": 27,
      "quartiles": [
-      30.6,
-      42.9,
-      54.3
+      37.5,
+      46.9,
+      55.8
      ],
      "peer_grain": "school"
     }
@@ -5387,6 +5624,7 @@
      "status": null,
      "n": 429,
      "n_excluded_small": 37,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       22.8,
       36.5,
@@ -5399,6 +5637,7 @@
      "status": null,
      "n": 424,
      "n_excluded_small": 46,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       23.7,
       38.0,
@@ -5407,16 +5646,10 @@
      "peer_grain": "school"
     },
     "2026": {
-     "band": "top quartile",
-     "status": null,
-     "n": 415,
-     "n_excluded_small": 47,
-     "quartiles": [
-      30.1,
-      44.4,
-      58.1
-     ],
-     "peer_grain": "school"
+     "band": null,
+     "status": "no_distribution",
+     "n": 0,
+     "n_excluded_small": 0
     }
    },
    "04": {
@@ -5425,6 +5658,7 @@
      "status": null,
      "n": 419,
      "n_excluded_small": 45,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       22.2,
       36.1,
@@ -5437,6 +5671,7 @@
      "status": null,
      "n": 420,
      "n_excluded_small": 42,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       26.2,
       41.4,
@@ -5445,16 +5680,10 @@
      "peer_grain": "school"
     },
     "2026": {
-     "band": "top quartile",
-     "status": null,
-     "n": 409,
-     "n_excluded_small": 51,
-     "quartiles": [
-      31.6,
-      46.5,
-      58.8
-     ],
-     "peer_grain": "school"
+     "band": null,
+     "status": "no_distribution",
+     "n": 0,
+     "n_excluded_small": 0
     }
    }
   },
@@ -5465,6 +5694,7 @@
      "status": null,
      "n": 832,
      "n_excluded_small": 14,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       24.3,
       33.5,
@@ -5477,6 +5707,7 @@
      "status": null,
      "n": 830,
      "n_excluded_small": 19,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       25.9,
       36.3,
@@ -5485,16 +5716,10 @@
      "peer_grain": "school"
     },
     "2026": {
-     "band": "top quartile",
-     "status": null,
-     "n": 823,
-     "n_excluded_small": 15,
-     "quartiles": [
-      31.9,
-      42.2,
-      53.3
-     ],
-     "peer_grain": "school"
+     "band": null,
+     "status": "no_distribution",
+     "n": 0,
+     "n_excluded_small": 0
     }
    },
    "03": {
@@ -5503,6 +5728,7 @@
      "status": null,
      "n": 429,
      "n_excluded_small": 37,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       22.8,
       34.3,
@@ -5515,6 +5741,7 @@
      "status": null,
      "n": 424,
      "n_excluded_small": 46,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       24.5,
       37.8,
@@ -5523,16 +5750,16 @@
      "peer_grain": "school"
     },
     "2026": {
-     "band": "top quartile",
-     "status": null,
-     "n": 415,
-     "n_excluded_small": 47,
+     "band": null,
+     "status": "n_not_published",
+     "n": 143,
+     "n_excluded_small": 0,
+     "n_excluded_n_not_published": 54,
      "quartiles": [
-      32.6,
-      45.6,
-      56.0
-     ],
-     "peer_grain": "school"
+      41.9,
+      49.5,
+      56.2
+     ]
     }
    },
    "04": {
@@ -5541,6 +5768,7 @@
      "status": null,
      "n": 419,
      "n_excluded_small": 45,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       22.9,
       34.0,
@@ -5553,6 +5781,7 @@
      "status": null,
      "n": 420,
      "n_excluded_small": 42,
+     "n_excluded_n_not_published": 0,
      "quartiles": [
       26.0,
       36.8,
@@ -5561,16 +5790,10 @@
      "peer_grain": "school"
     },
     "2026": {
-     "band": "top quartile",
-     "status": null,
-     "n": 409,
-     "n_excluded_small": 51,
-     "quartiles": [
-      30.9,
-      44.0,
-      55.0
-     ],
-     "peer_grain": "school"
+     "band": null,
+     "status": "no_distribution",
+     "n": 0,
+     "n_excluded_small": 0
     }
    }
   },
@@ -5763,35 +5986,35 @@
  },
  "growth": {
   "ELA": {
-   "delta": 25.7,
-   "level": 56.2044,
+   "delta": 25.3,
+   "level": 55.7971,
    "from_year": 2024,
    "to_year": 2026,
    "reason": null,
    "computed": true
   },
   "Reading": {
-   "delta": 22.1,
-   "level": 52.5547,
+   "delta": 21.7,
+   "level": 52.1739,
    "from_year": 2024,
    "to_year": 2026,
    "reason": null,
    "computed": true
   },
   "Math": {
-   "delta": 28.2,
-   "level": 63.5036,
+   "delta": 28.5,
+   "level": 63.7681,
    "from_year": 2024,
    "to_year": 2026,
    "reason": null,
    "computed": true
   },
   "Science": {
-   "delta": 25.4,
-   "level": 63.5,
+   "delta": null,
+   "level": null,
    "from_year": 2024,
    "to_year": 2026,
-   "reason": null,
+   "reason": "below_n_floor_or_suppressed",
    "computed": true
   },
   "Algebra": {
@@ -5970,42 +6193,49 @@
   "note": null,
   "medians": {
    "ELA": {
-    "median": 36.3,
-    "n_peers_used": 12,
-    "n_peers_excluded": 0
+    "median": 39.9,
+    "n_peers_used": 8,
+    "n_peers_excluded": 4,
+    "n_peers_n_not_published": 0
    },
    "Reading": {
-    "median": 37.1,
-    "n_peers_used": 12,
-    "n_peers_excluded": 0
+    "median": 37.5,
+    "n_peers_used": 11,
+    "n_peers_excluded": 1,
+    "n_peers_n_not_published": 0
    },
    "Math": {
-    "median": 43.9,
-    "n_peers_used": 12,
-    "n_peers_excluded": 0
+    "median": 45.8,
+    "n_peers_used": 9,
+    "n_peers_excluded": 3,
+    "n_peers_n_not_published": 0
    },
    "Science": {
-    "median": 36.2,
-    "n_peers_used": 12,
-    "n_peers_excluded": 0
+    "median": 37.4,
+    "n_peers_used": 10,
+    "n_peers_excluded": 2,
+    "n_peers_n_not_published": 0
    },
    "Algebra": {
     "median": null,
     "n_peers_used": 0,
-    "n_peers_excluded": 12
+    "n_peers_excluded": 12,
+    "n_peers_n_not_published": 0
    },
    "Geometry": {
     "median": null,
     "n_peers_used": 0,
-    "n_peers_excluded": 12
+    "n_peers_excluded": 12,
+    "n_peers_n_not_published": 0
    },
    "Biology": {
     "median": null,
     "n_peers_used": 0,
-    "n_peers_excluded": 12
+    "n_peers_excluded": 12,
+    "n_peers_n_not_published": 0
    }
   },
-  "medians_note": "Peer medians are computed from ADE's published school figures; peers below 30 tested students are excluded and counted."
+  "medians_note": "Peer medians are computed from ADE's published school figures; peers below 30 tested students, or whose N Tested ADE did not publish, are excluded and counted."
  },
  "context": {
   "enrollment": {
@@ -6070,23 +6300,23 @@
   }
  },
  "provenance": {
-  "built_at": "2026-08-05",
-  "panel_rows": 169239,
+  "built_at": "2026-10-13",
+  "panel_rows": 169631,
   "source_files": [
+   "3-10_ATLAS_Summary_2026_Public_Schools_08-20-2026_web_PSA.xlsx",
+   "3-10_ATLAS_Summary_2026_Public_Schools_COOP_County_08-20-2026_web_PSA.xlsx",
+   "3-10_ATLAS_Summary_2026_Public_Schools_by_Grade_08-20-2026_web_PSA.xlsx",
    "ATLAS_Summary_Post-Corrections_Scores_County_Coop_Spring_2025_PSA.xlsx",
    "ATLAS_Summary_Post-Corrections_Scores_No-Grade_Spring_2025_PSA.xlsx",
    "ATLAS_Summary_Post-Corrections_Scores_Spring_2025_PSA.xlsx",
-   "ATLAS_Summary_Pre-Appeals_Scores_by_Grade_Spring_2026_PSA.xlsx",
    "Atlas_Summary_10182024_PSA.xlsx",
    "Atlas_Summary_COOP_County_10182024_PSA.xlsx",
-   "Atlas_Summary_Nograde_10182024_PSA.xlsx",
-   "Atlas_Summary_Pre-Appeals_Scores_COOP_County_Spring_2026_PSA.xlsx",
-   "Atlas_Summary_Pre-Appeals_Scores_No_Grade_Spring_2026_PSA.xlsx"
+   "Atlas_Summary_Nograde_10182024_PSA.xlsx"
   ],
   "releases": {
    "2024": "ATLAS Summary Post-Appeals Scores Spring 2024",
    "2025": "ATLAS Summary Post-Corrections Scores Spring 2025 (XLSX)",
-   "2026": "ATLAS Summary Pre-Appeals Scores Spring 2026 (XLSX)"
+   "2026": "ATLAS Summary Post-Corrections Scores by Grade Spring 2026 (XLSX)"
   }
  }
 }

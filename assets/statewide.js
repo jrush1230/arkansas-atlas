@@ -39,6 +39,7 @@
   const REASONS = {
     not_published_both_years: "not published in both years",
     below_n_floor: "fewer than " + DATA.small_n_floor + " tested",
+    n_not_published: "N not published by ADE",
   };
 
   /* Three steps per arm. The thresholds are round numbers in percentage

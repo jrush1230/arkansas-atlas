@@ -316,3 +316,10 @@ footer .copyright { margin-top: 10px; }
 .selbar .toolbar { margin-bottom: 6px; }
 .selecho { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 10px; white-space: nowrap; }
 @media print { .selbar { display: none; } .selecho { color: #555; } }
+
+/* ---- Step C: a withheld change prints its reason, and the reason wraps ----
+   "N not published by ADE in one endpoint year" is far wider than any change
+   figure; under `table.data`'s nowrap it pushed the change column off the card
+   on screen (and would off the sheet on paper). The reason cell wraps inside a
+   width close to the figure it replaces. */
+table.data td.reason { white-space: normal; max-width: 13em; line-height: 1.3; }

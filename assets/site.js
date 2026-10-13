@@ -75,6 +75,9 @@
     return lum > 0.42 ? "#111111" : "#ffffff";
   }
   const statusText = (code) => STATUS[code] || "not published";
+  // N Tested as displayed: ADE can publish a percentage while masking N
+  // (2026 Post-Corrections) -- say so rather than printing "null".
+  const nText = (c) => (c.n_tested !== null ? String(c.n_tested) : statusText(c.n_status));
 
   /* ---------- state ---------- */
 
@@ -192,7 +195,7 @@
     };
     const maxLabelChars = Math.max(14, ...groups.map((g) => groupLabelText(g).length));
     const W = 780, H = 360,
-      M = { t: 18, r: Math.max(120, Math.min(300, Math.round(maxLabelChars * 7.0) + 20)), b: 46, l: 46 };
+      M = { t: 18, r: Math.max(120, Math.min(300, Math.round(maxLabelChars * 7.0) + 20)), b: 58, l: 46 };
     const iw = W - M.l - M.r, ih = H - M.t - M.b;
     const s = svg("svg", { viewBox: `0 0 ${W} ${H}`, role: "img",
       "aria-label": `${state.subject} percent proficient, ${YEARS[0]} to ${YEARS[YEARS.length - 1]}` });
@@ -236,9 +239,16 @@
       const xl = state.mode === "cohort" && state.grade !== "ALL" && chainGrade(state.grade, yr)
         ? `${yr} \u00b7 Gr ${parseInt(chainGrade(state.grade, yr), 10)}` : String(yr);
       s.appendChild(svg("text", { class: "ticklabel", x: x(i), y: M.t + ih + 22, "text-anchor": "middle" }, xl));
-      const rel = DATA.release[yr];
-      if (rel) s.appendChild(svg("text", { class: "ticklabel", x: x(i), y: M.t + ih + 37,
-        "text-anchor": "middle", "font-size": "10.5" }, releaseShort(rel)));
+      // Stage as the build decided it; a long one ("Final (Post-Corrections,
+      // posted ...)") is split so the parenthetical sits on its own line.
+      const stage = (DATA.release_stage || {})[yr] || releaseShort(DATA.release[yr]);
+      if (stage) {
+        const cut = stage.indexOf(" (");
+        s.appendChild(svg("text", { class: "ticklabel", x: x(i), y: M.t + ih + 37,
+          "text-anchor": "middle", "font-size": "10.5" }, cut > 0 ? stage.slice(0, cut) : stage));
+        if (cut > 0) s.appendChild(svg("text", { class: "ticklabel", x: x(i), y: M.t + ih + 50,
+          "text-anchor": "middle", "font-size": "9.5" }, stage.slice(cut + 1)));
+      }
     });
 
     const labelItems = [];
@@ -344,7 +354,7 @@
             color: cssVar(BENCH_VARS[level]),
             k: BENCH_NAMES[level],
             v: c && c.pct_proficient !== null
-              ? `${c.pct_proficient.toFixed(1)}%  (n=${c.n_tested})`
+              ? `${c.pct_proficient.toFixed(1)}%  (n=${nText(c)})`
               : statusText(c ? c.status : "not_published"),
           };
         });
@@ -429,7 +439,10 @@
         const vg = viewGrade(r.yr);
         const emptyLabel = !vg ? "beyond Grade 12"
           : r.c && r.c.status === "not_offered" && state.mode === "cohort" && state.grade !== "ALL"
-            ? `not tested in Gr ${parseInt(vg, 10)}` : statusText(r.c ? r.c.status : "not_published");
+            ? `not tested in Gr ${parseInt(vg, 10)}`
+            : r.c && r.c.pct_proficient !== null
+              ? `${r.c.pct_proficient.toFixed(1)}% at L3+4 \u00b7 level breakdown suppressed`
+              : statusText(r.c ? r.c.status : "not_published");
         s.appendChild(svg("text", { class: "pointlabel", x: xc, y: yTested,
           "text-anchor": "middle" }, emptyLabel));
         return;
@@ -463,7 +476,7 @@
           showTip(ev.pageX, ev.pageY, `${r.yr} \u00b7 ${LEVEL_NAMES[li]}`, [
             { color: cssVar(LEVEL_VARS[li]), k: "Share", v: p.toFixed(1) + "%" },
             { k: "Students", v: counts && counts[li] !== null ? counts[li] : statusText(r.c.counts_status) },
-            { k: "Tested", v: r.c.n_tested },
+            { k: "Tested", v: nText(r.c) },
           ], r.c.pct_basis === "published_pct"
             ? "Percentages as published by ADE; per-level counts not available for this cell."
             : null);
@@ -481,7 +494,8 @@
         fill: cssVar("--text-secondary"), "font-size": "12", "font-weight": "600" },
         "\u25bc " + belowPct.toFixed(1) + "%"));
       s.appendChild(svg("text", { class: "pointlabel", x: xc, y: yTested, "text-anchor": "middle" },
-        `${r.c.n_tested} tested` + (r.c.small_n ? "  \u26a0 small group" : "")));
+        (r.c.n_tested !== null ? `${r.c.n_tested} tested` : nText(r.c))
+          + (r.c.small_n ? "  \u26a0 small group" : "")));
     });
 
     host.appendChild(s);
@@ -522,12 +536,18 @@
         } else {
           tr.appendChild(h("td", {}, [
             pct(c.pct_proficient),
-            c.small_n ? h("span", { class: "badge small-n", title: `Fewer than ${SMALL_N} tested` }, [" n=" + c.n_tested]) : "",
+            c.small_n ? h("span", { class: "badge small-n", title: `Fewer than ${SMALL_N} tested` }, [" n=" + c.n_tested])
+              : c.n_status ? h("span", { class: "badge n-np", title: "ADE published the percentage but not the number tested" }, [" " + statusText(c.n_status)]) : "",
           ]));
         }
       });
       const a = cells[0], b = cells[cells.length - 1];
-      if (a && b && a.pct_proficient !== null && b.pct_proficient !== null) {
+      // An endpoint whose N ADE did not publish gets no computed change -- the
+      // same rule as the three-year growth and peer views (Step C, C3b).
+      if (a && b && a.pct_proficient !== null && b.pct_proficient !== null
+          && (a.n_status === "n_not_published" || b.n_status === "n_not_published")) {
+        tr.appendChild(h("td", { class: "na reason" }, ["N not published by ADE in one endpoint year"]));
+      } else if (a && b && a.pct_proficient !== null && b.pct_proficient !== null) {
         const d = b.pct_proficient - a.pct_proficient;
         const cls = d > 0.05 ? "up" : d < -0.05 ? "down" : "flat";
         tr.appendChild(h("td", {}, [h("span", { class: "delta " + cls },
@@ -619,13 +639,18 @@
         ` of ${pos.n} ${DATA.entity.type}s statewide with a published ${state.subject} figure ` +
         `for ${gradeLabel(state.grade).toLowerCase()}. `,
         pos.n_excluded_small
-          ? `${pos.n_excluded_small} more published a figure but tested fewer than ${SMALL_N} students and are left out of the distribution.`
+          ? `${pos.n_excluded_small} more published a figure but tested fewer than ${SMALL_N} students and are left out of the distribution. `
+          : "",
+        pos.n_excluded_n_not_published
+          ? `${pos.n_excluded_n_not_published} more published a percentage without the number tested and are left out too.`
           : "",
       ]));
     } else {
       note.textContent = pos.status === "below_n_floor"
         ? `Not placed in the distribution: fewer than ${SMALL_N} students tested, which makes a percentage too volatile to position honestly.`
-        : "Not placed in the distribution: no published figure for this cut.";
+        : pos.status === "n_not_published"
+          ? "Not placed in the distribution: ADE published the percentage but not the number of students tested, so it cannot be checked against the size floor."
+          : "Not placed in the distribution: no published figure for this cut.";
     }
     host.appendChild(s);
   }

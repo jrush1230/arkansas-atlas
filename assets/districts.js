@@ -105,7 +105,14 @@
       if (!b || b[0] === null || b[0] === undefined) {
         return { val: null, reason: "no published figure for " + v.b, rec: rec };
       }
-      if ((a[1] || 0) < FLOOR || (b[1] || 0) < FLOOR) {
+      // ADE masked N Tested while publishing the percentage (2026
+      // Post-Corrections): the floor cannot be applied, and the district is
+      // not small -- so it gets its own reason, never "fewer than N tested".
+      if (a[1] === null || a[1] === undefined || b[1] === null || b[1] === undefined) {
+        return { val: null, rec: rec,
+          reason: "N not published by ADE in one endpoint year" };
+      }
+      if (a[1] < FLOOR || b[1] < FLOOR) {
         return { val: null, rec: rec,
           reason: "fewer than " + FLOOR + " tested in one endpoint year" };
       }
